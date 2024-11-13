@@ -9,3 +9,4 @@ function view($path_view, $data = [])
 
     include_once "views/$path_view.php";
 }
+// chú thích
