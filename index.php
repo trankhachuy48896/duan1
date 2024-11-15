@@ -1,3 +1,5 @@
+<!-- Trang client -->
+
 <?php
 
 require_once "commons/env.php";
