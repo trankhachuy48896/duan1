@@ -13,12 +13,12 @@
     <header>
         <section class="header">
             <div class="logo-header">
-                <img src="../img/fahasa-logo.webp" alt="">
+                <a href="index.php"><img src="img/fahasa-logo.webp" alt=""></a>
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="index.php">Trang Chủ</a></li>
                     <li><a href="#">Cửa Hàng</a></li>
                     <li><a href="#">Bài Viết</a></li>
                     <li><a href="#">Liên Hệ</a></li>
@@ -33,7 +33,7 @@
 
             <div class="item">
                 <ul>
-                    <li><a href="#" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
                     <li><a href="#" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </div>

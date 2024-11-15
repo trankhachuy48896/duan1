@@ -1,7 +1,7 @@
  <footer>
      <div class="about-us">
          <div class="logo-footer">
-             <img src="../img/fahasa-logo.webp" alt="">
+             <img src="img/fahasa-logo.webp" alt="">
          </div>
 
 
