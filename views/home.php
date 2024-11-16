@@ -52,11 +52,21 @@
         <hr>
         <div class="books">
             <div class="book">
+<<<<<<< HEAD
                 <img src="img/tieuthuyet.webp" alt="">
                 <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
                 <p>40.000đ</p>
                 <p>-20%</p>
                 <p><del>50.000đ</del></p>
+=======
+                <a href="index.php?ctl=chi_tiet">
+                    <img src="img/tieuthuyet.webp" alt="">
+                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
+                    <p>40.000đ</p>
+                    <p>-20%</p>
+                    <p><del>50.000đ</del></p>
+                </a>
+>>>>>>> 285ad268ba15bfabc44d2ef7c4c4c425a48490d7
             </div>
 
             <div class="book">

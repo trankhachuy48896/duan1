@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <footer id="footer">
+=======
+ <footer>
+>>>>>>> 285ad268ba15bfabc44d2ef7c4c4c425a48490d7
      <div class="about-us">
          <div class="logo-footer">
              <img src="img/fahasa-logo.webp" alt="">
