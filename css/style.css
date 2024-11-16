@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Phần header */
@@ -13,6 +13,7 @@ header {
     width: 100%;
     height: 70px;
     background-color: white;
+    
 }
 
 .header {
@@ -208,6 +209,10 @@ article h2 {
     justify-content: space-around;
 }
 
+.books .book a{
+    text-decoration: none;
+}
+
 .book {
     width: calc(20% - 16px);
     box-sizing: border-box;
@@ -388,9 +393,206 @@ footer {
     cursor: pointer;
 }
 
+/* Chi tiết sản phẩm */
+.chitiet {
+    display: flex;
+    gap: 30px;
+}
+
+
+.chitiet_left img{
+    width: 400px;
+    height: auto;
+}
+
+.chitiet_right h2{
+    color: #000;
+}
+.chitiet_right p:nth-of-type(1)  {
+    margin-top: 15px;
+}
+.chitiet_right p:nth-of-type(2)  {
+    margin-top: 5px;
+}
+
+.chitiet_right p:nth-of-type(3) {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #e60000;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+/* Phần trăm giảm giá */
+.chitiet_right p:nth-of-type(4) {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #e60000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Giá gốc */
+.chitiet_right p:nth-of-type(5) {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.chitiet_right p:nth-of-type(6) {
+    margin-top: 40px;
+    color: #2e2e2e;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.soluong {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Phân bổ không gian đều giữa các phần tử */
+    width: 250px;
+    /* Chiều rộng tổng thể của khối */
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+}
+
+.soluong label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.soluong button {
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.soluong input {
+    width: 60px;
+    /* Chiều rộng ô nhập */
+    height: 30px;
+    /* Chiều cao đồng nhất với nút */
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    pointer-events: none;
+}
+
+.soluong button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.soluong button:active {
+    transform: scale(0.95);
+}
+
+.chitiet_right .mua_ngay,
+.chitiet_right .them_gio_hang{
+    margin-top: 10px;
+}
+
+.chitiet_right .mua_ngay{
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #CB2227;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chitiet_right .them_gio_hang{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    background-color: white;
+    border: 2px solid #CB2227;
+    border-radius: 8px;
+    color: #CB2227;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.danh_gia{
+    width: 80%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top:  20px;
+}
+
+.danh_gia h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #CB2227;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.danh_gia form{
+    margin-top: 20px;
+}
+
+.danh_gia input {
+    width: 100%;
+    padding: 10px;
+    /* Tạo khoảng cách giữa chữ và viền input */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.danh_gia button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #CB2227;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+}
+
+.danh_gia button:hover {
+    background-color: #e60000;
+}
+
+.danh_gia button:active {
+    transform: scale(0.95);
+}
+
+
+
 
 /* Form login */
-
 .form{
     background-color: rgb(241, 241, 241);
     
