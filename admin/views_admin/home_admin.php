@@ -12,7 +12,7 @@
                     <th>Tên danh mục</th>
                     <th>Ảnh</th>
                     <th>
-                        <a href="index_admin.php?ctl=form_add_dm">Thêm</a>
+                        <a href="index.php?ctl=form_add_dm">Thêm</a>
                     </th>
                 </tr>
             </thead>
@@ -22,7 +22,7 @@
                     <td>Trinh thám</td>
                     <td><img src="../img/tieuthuyet.webp" alt=""></td>
                     <td>
-                        <a href="index_admin.php?ctl=edit_dm">Sửa</a>
+                        <a href="index.php?ctl=edit_dm">Sửa</a>
                         <a href="#">Xóa</a>
                     </td>
                 </tr>

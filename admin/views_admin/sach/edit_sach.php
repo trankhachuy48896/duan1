@@ -4,6 +4,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         Tên sách: <input type="text" name="" id="" required>
         Giá: <input type="number" name="" id="" min="0" required>
+        Số lượng: <input type="number" name="" id="" min="0" required>
         Mô tả: <textarea name="" id="" rows="6"></textarea>
         Ảnh: <input type="file" name="" id="" required>
         Thuộc danh mục: <select name="" id="">

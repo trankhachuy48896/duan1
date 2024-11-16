@@ -9,7 +9,7 @@
                     <th>ID</th>
                     <th>Tên tác giả</th>
                     <th>
-                        <a href="index_admin.php?ctl=form_add_tg">Thêm</a>
+                        <a href="index.php?ctl=form_add_tg">Thêm</a>
                     </th>
                 </tr>
             </thead>
@@ -18,7 +18,7 @@
                     <td>1</td>
                     <td>Phạm Gia Bảo</td>
                     <td>
-                        <a href="index_admin.php?ctl=edit_tg">Sửa</a>
+                        <a href="index.php?ctl=edit_tg">Sửa</a>
                         <a href="#">Xóa</a>
                     </td>
                 </tr>

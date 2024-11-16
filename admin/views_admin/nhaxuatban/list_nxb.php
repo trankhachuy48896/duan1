@@ -9,7 +9,7 @@
                     <th>ID</th>
                     <th>Tên nhà xuất bản</th>
                     <th>
-                        <a href="index_admin.php?ctl=form_add_nxb">Thêm</a>
+                        <a href="index.php?ctl=form_add_nxb">Thêm</a>
                     </th>
                 </tr>
             </thead>
@@ -18,7 +18,7 @@
                     <td>1</td>
                     <td>Kim Đồng</td>
                     <td>
-                        <a href="index_admin.php?ctl=edit_nxb">Sửa</a>
+                        <a href="index.php?ctl=edit_nxb">Sửa</a>
                         <a href="#">Xóa</a>
                     </td>
                 </tr>

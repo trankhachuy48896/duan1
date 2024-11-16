@@ -16,7 +16,7 @@
                     <th>Vai trò</th>
 
                     <th>
-                        <a href="index_admin.php?ctl=form_add_tk">Thêm</a>
+                        <a href="index.php?ctl=form_add_tk">Thêm</a>
                     </th>
                 </tr>
             </thead>
@@ -31,7 +31,7 @@
                     <td>Vĩnh Phúc</td>
                     <td>Admin</td>
                     <td>
-                        <a href="index_admin.php?ctl=edit_tk">Sửa</a>
+                        <a href="index.php?ctl=edit_tk">Sửa</a>
                         <a href="#">Xóa</a>
                     </td>
                 </tr>

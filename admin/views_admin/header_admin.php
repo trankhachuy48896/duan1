@@ -20,13 +20,13 @@
             </section>
             <nav class="menu">
                 <ul>
-                    <li><i class="fa-solid fa-list"></i><a href="index_admin.php">Danh mục</a></li>
-                    <li><i class="fa-solid fa-book"></i><a href="index_admin.php?ctl=list_sach">Sách</a></li>
-                    <li><i class="fa-solid fa-circle-user"></i><a href="index_admin.php?ctl=list_tk">Tài khoản</a></li>
-                    <li><i class="fa-solid fa-comment"></i><a href="index_admin.php?ctl=list_bl">Bình luận</a></li>
-                    <li><i class="fa-solid fa-cart-shopping"></i><a href="index_admin.php?ctl=list_dh">Đơn hàng</a></li>
-                    <li><i class="fa-solid fa-at"></i><a href="index_admin.php?ctl=list_tg">Tác giả</a></li>
-                    <li><i class="fa-solid fa-bookmark"></i><a href="index_admin.php?ctl=list_nxb">Nhà xuất bản</a></li>
+                    <li><i class="fa-solid fa-list"></i><a href="index.php">Danh mục</a></li>
+                    <li><i class="fa-solid fa-book"></i><a href="index.php?ctl=list_sach">Sách</a></li>
+                    <li><i class="fa-solid fa-circle-user"></i><a href="index.php?ctl=list_tk">Tài khoản</a></li>
+                    <li><i class="fa-solid fa-comment"></i><a href="index.php?ctl=list_bl">Bình luận</a></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i><a href="index.php?ctl=list_dh">Đơn hàng</a></li>
+                    <li><i class="fa-solid fa-at"></i><a href="index.php?ctl=list_tg">Tác giả</a></li>
+                    <li><i class="fa-solid fa-bookmark"></i><a href="index.php?ctl=list_nxb">Nhà xuất bản</a></li>
                     <li><i class="fa-solid fa-chart-simple"></i><a href="#">Thống kê</a></li>
                     <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Đăng xuất</a></li>
 
