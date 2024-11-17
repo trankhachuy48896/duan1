@@ -14,6 +14,9 @@ $ctl = $_GET['ctl'] ?? "";
 
 match ($ctl) {
     "" => (new homeController) -> index(),
+    "form_dangnhap" => (new khachhangController) -> login(),
+    "form_dangky" => (new khachhangController) -> sign_up(),
+    "store" => (new store) -> store(),
     // Form đăng ký, đăng nhập
     "form_dangnhap" => (new khachhangController) -> login(),
     "form_dangky" => (new khachhangController) -> sign_up(),

@@ -29,6 +29,10 @@ include "header.php";
 
 </div>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 285ad268ba15bfabc44d2ef7c4c4c425a48490d7
 <?php
 include "footer.php";
 ?>

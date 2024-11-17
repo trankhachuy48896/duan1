@@ -18,6 +18,7 @@ function connection()
     }
 }
 
+
 // Render view client
 function view($view, $data = [])
 {
