@@ -8,6 +8,8 @@ require_once "controllers/homeController.php";
 require_once "controllers/khachhangController.php";
 require_once "controllers/storeController.php";
 require_once "controllers/sachController.php";
+require_once "controllers/giohangController.php";
+
 $ctl = $_GET['ctl'] ?? "";
 
 match ($ctl) {
@@ -18,5 +20,7 @@ match ($ctl) {
     "form_dangky" => (new khachhangController) -> sign_up(),
     // Chi tiết sản phẩm
     "chi_tiet" => (new sachController) -> chi_tiet(),
+    // Giỏ hàng
+    "gio_hang" => (new giohangController) -> gio_hang(),
     default => view('404'),
 };

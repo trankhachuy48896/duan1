@@ -1,20 +1,24 @@
-body{
+body {
     width: 100%;
     background-color: #EEEEEE;
 }
+
 * {
     margin: 0;
 }
-.container{
+
+.container {
     width: 90%;
     margin: 20px auto;
     display: flex;
 }
-.left{
+
+.left {
     width: 25%;
     margin-top: -5px;
 }
-.right{
+
+.right {
     background-color: #f9f9f9;
     margin: 0 10px;
     width: 75%;
@@ -22,49 +26,65 @@ body{
     border-radius: 10px;
 
 }
-.title{
+
+.title {
     padding: 10px;
     outline: solid 1px black;
 }
-.products{ 
+
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
     gap: 0 40px;
 }
-.products .book{
+
+.products .book {
     width: 30%;
 }
-.popular_categories{
+
+.products .book a {
+    text-decoration: none;
+}
+
+.popular_categories {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
-.popular_categories a{
+
+.popular_categories a {
     display: block;
     text-decoration: none;
     color: black;
     padding: 5px 20px;
 }
-.popular_categories a:hover{
+
+.popular_categories a:hover {
     color: red;
 }
-.input label{
+
+.input label {
     display: flex;
 }
-footer{
+
+footer {
     background-color: white;
 }
-.about-us{
+
+.about-us {
     margin: 0 auto;
 }
-.information div{
+
+.information div {
     margin: 0 auto;
 }
-.header{
+
+.header {
     margin: 0 auto;
 }
-header div{
+
+header div {
     margin: 0 auto;
 }
 
@@ -82,44 +102,51 @@ header div{
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 .select .input {
     display: flex;
     margin-bottom: 12px;
 }
+
 .select .input label {
     font-size: 14px;
     cursor: pointer;
     color: #333;
 }
+
 .select .input input[type="checkbox"] {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    accent-color: #3498db; 
+    accent-color: #3498db;
 
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.5s, border-color 0.5s;
 }
+
 .select .input input[type="checkbox"]:hover {
-    background-color: #99ccff; 
-    border-color: #6699cc;    
+    background-color: #99ccff;
+    border-color: #6699cc;
 }
-.select .input input[type="checkbox"]:checked + label {
+
+.select .input input[type="checkbox"]:checked+label {
     font-weight: bold;
     color: #3498db;
 }
+
 .select .input input[type="checkbox"]:checked {
     background-color: #3498db;
     border-color: #2980b9;
 }
+
 input[type="checkbox"]:checked::before {
-    content: '✔'; 
+    content: '✔';
     color: white;
     font-size: 14px;
     display: block;
-    margin: -1px 3px; 
+    margin: -1px 3px;
 }
 
 
@@ -131,34 +158,40 @@ input[type="checkbox"]:checked::before {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 .categories .input {
     display: flex;
     margin-bottom: 12px;
 }
+
 .categories .input label {
     font-size: 14px;
     cursor: pointer;
     color: #333;
 }
+
 .categories .input input[type="checkbox"] {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    accent-color: #3498db; 
+    accent-color: #3498db;
 
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.5s, border-color 0.5s;
 }
+
 .categories .input input[type="checkbox"]:hover {
-    background-color: #99ccff; 
-    border-color: #6699cc;    
+    background-color: #99ccff;
+    border-color: #6699cc;
 }
-.categories .input input[type="checkbox"]:checked + label {
+
+.categories .input input[type="checkbox"]:checked+label {
     font-weight: bold;
     color: #3498db;
 }
+
 .categories .input input[type="checkbox"]:checked {
     background-color: #3498db;
     border-color: #2980b9;
@@ -173,34 +206,40 @@ input[type="checkbox"]:checked::before {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 .publisher .input {
     display: flex;
     margin-bottom: 12px;
 }
+
 .publisher .input label {
     font-size: 14px;
     cursor: pointer;
     color: #333;
 }
+
 .publisher .input input[type="checkbox"] {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    accent-color: #3498db; 
+    accent-color: #3498db;
 
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.5s, border-color 0.5s;
 }
-.publisher .input input[type="checkbox"]:checked + label {
+
+.publisher .input input[type="checkbox"]:checked+label {
     font-weight: bold;
     color: #3498db;
 }
+
 .publisher .input input[type="checkbox"]:hover {
-    background-color: #99ccff; 
-    border-color: #6699cc;    
+    background-color: #99ccff;
+    border-color: #6699cc;
 }
+
 .publisher .input input[type="checkbox"]:checked {
     background-color: #3498db;
     border-color: #2980b9;
@@ -215,34 +254,40 @@ input[type="checkbox"]:checked::before {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 .origin .input {
     display: flex;
     margin-bottom: 12px;
 }
+
 .origin .input label {
     font-size: 14px;
     cursor: pointer;
     color: #333;
 }
+
 .origin .input input[type="checkbox"] {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    accent-color: #3498db; 
+    accent-color: #3498db;
 
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.5s, border-color 0.5s;
 }
-.origin .input input[type="checkbox"]:checked + label {
+
+.origin .input input[type="checkbox"]:checked+label {
     font-weight: bold;
     color: #3498db;
 }
+
 .origin .input input[type="checkbox"]:hover {
-    background-color: #99ccff; 
-    border-color: #6699cc;    
+    background-color: #99ccff;
+    border-color: #6699cc;
 }
+
 .origin .input input[type="checkbox"]:checked {
     background-color: #3498db;
     border-color: #2980b9;
@@ -258,39 +303,41 @@ input[type="checkbox"]:checked::before {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 .for_age .input {
     display: flex;
     margin-bottom: 12px;
 }
+
 .for_age .input label {
     font-size: 14px;
     cursor: pointer;
     color: #333;
 }
+
 .for_age .input input[type="checkbox"] {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    accent-color: #3498db; 
+    accent-color: #3498db;
 
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.5s, border-color 0.5s;
 }
-.for_age .input input[type="checkbox"]:checked + label {
+
+.for_age .input input[type="checkbox"]:checked+label {
     font-weight: bold;
     color: #3498db;
 }
+
 .for_age .input input[type="checkbox"]:hover {
-    background-color: #99ccff; 
-    border-color: #6699cc;    
+    background-color: #99ccff;
+    border-color: #6699cc;
 }
+
 .for_age .input input[type="checkbox"]:checked {
     background-color: #3498db;
     border-color: #2980b9;
 }
-
-
-
-
