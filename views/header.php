@@ -26,16 +26,16 @@
                 </ul>
             </div>
 
-            <div class="form-timkiem">
-                <input type="text" placeholder="Tìm kiếm...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+                <div class="form-timkiem">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
 
-            <div class="item">
-                <ul>
-                    <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="#" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </div>
-        </section>
-    </header>
+                <div class="item">
+                    <ul>
+                        <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="#" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>

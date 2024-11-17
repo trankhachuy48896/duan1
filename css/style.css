@@ -208,9 +208,10 @@ article h2 {
     justify-content: space-around;
 }
 
-.books .book a{
+.books .book a {
     text-decoration: none;
 }
+
 .book {
     width: calc(20% - 16px);
     box-sizing: border-box;
@@ -390,6 +391,7 @@ footer {
     color: #CB2227;
     cursor: pointer;
 }
+
 /* Chi tiết sản phẩm */
 .chitiet {
     display: flex;
@@ -397,18 +399,20 @@ footer {
 }
 
 
-.chitiet_left img{
+.chitiet_left img {
     width: 400px;
     height: auto;
 }
 
-.chitiet_right h2{
+.chitiet_right h2 {
     color: #000;
 }
-.chitiet_right p:nth-of-type(1)  {
+
+.chitiet_right p:nth-of-type(1) {
     margin-top: 15px;
 }
-.chitiet_right p:nth-of-type(2)  {
+
+.chitiet_right p:nth-of-type(2) {
     margin-top: 5px;
 }
 
@@ -460,7 +464,7 @@ footer {
     margin: 10px 0;
 }
 
-.soluong label{
+.soluong label {
     font-size: 18px;
     font-weight: bold;
 }
@@ -502,11 +506,11 @@ footer {
 }
 
 .chitiet_right .mua_ngay,
-.chitiet_right .them_gio_hang{
+.chitiet_right .them_gio_hang {
     margin-top: 10px;
 }
 
-.chitiet_right .mua_ngay{
+.chitiet_right .mua_ngay {
     width: 150px;
     height: 50px;
     font-size: 18px;
@@ -519,7 +523,7 @@ footer {
     cursor: pointer;
 }
 
-.chitiet_right .them_gio_hang{
+.chitiet_right .them_gio_hang {
     width: 200px;
     height: 50px;
     font-size: 18px;
@@ -532,16 +536,16 @@ footer {
 }
 
 
-.danh_gia{
+.danh_gia {
     width: 80%;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     cursor: pointer;
-    margin-top:  20px;
+    margin-top: 20px;
 }
 
-.danh_gia h2{
+.danh_gia h2 {
     font-size: 20px;
     font-weight: bold;
     color: #CB2227;
@@ -549,7 +553,7 @@ footer {
     text-transform: uppercase;
 }
 
-.danh_gia form{
+.danh_gia form {
     margin-top: 20px;
 }
 
@@ -590,14 +594,14 @@ footer {
 
 
 /* Form login */
-.form{
+.form {
     background-color: rgb(241, 241, 241);
-    
+
 }
 
 
 .form_login {
-    width: 30%; 
+    width: 30%;
     padding: 30px;
 }
 
