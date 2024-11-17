@@ -1,35 +1,12 @@
 <?php
 require_once "header.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <link rel="stylesheet" href="css/store_css.css">
-</head>
+<link rel="stylesheet" href="css/store_css.css">
 <body>
     <div class="container">
-        <div class="left">
-            <p style="padding: 5px 10px">Trang chủ -> Cửa hàng</p>
-            <hr>
+        <div class="left">        
             <div class="left_content">
-                <div class="title_left">
-                    <h2 style="padding: 10px;text-transform: uppercase;">Lọc sản phẩm</h2>
-                    <hr>
-                </div>
-                <div class="choose">
-                    <div class="popular_categories">
-                        <h2 style="text-decoration: underline;text-decoration-thickness: 2px;">Thể loại tiêu biểu</h2>
-                        <a href="#">Sách thiếu nhi</a>
-                        <a href="#">Tiểu thuyết</a>
-                        <a href="#">Tiểu thuyết ngắn</a>
-                        <a href="#">Truyện ngắn</a>
-                        <a href="#">Tuyện ngôn tình</a>
-                        <a href="#">Văn học dân gian</a>
-                    </div>
-                    <hr>
+                <div class="choose">                
                     <div class="select">
                         <h3 style="padding-bottom: 10px;">Giá tiền:</h3>
                         <div class="input">
@@ -62,7 +39,7 @@ require_once "header.php";
                                 <span>700.000 trở lên</span>
                             </label>
                         </div>
-                        <hr>
+                        
                     </div>
                     <div class="categories">
                         <h3 style="padding-bottom: 10px;">Thể loại</h3>
@@ -246,7 +223,7 @@ require_once "header.php";
                                 <span>Young Adult</span>
                             </label>
                         </div>
-                        <hr>
+                        
                     </div>
                     <div class="publisher">
                         <h3 style="padding-bottom: 10px;">Nhà xuất bản</h3>
@@ -290,39 +267,7 @@ require_once "header.php";
                             <input type="checkbox">
                             <label for="">Fisrt News</span>
                             </label>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="origin">
-                        <h3 style="padding-bottom: 10px;">Xuất xứ</h3>
-                        <div class="input">
-                            <input type="checkbox">
-                            <label for="">
-                                <span>Việt Nam</span>
-                            </label>
-                        </div>
-                        <div class="input">
-                            <input type="checkbox">
-                            <label for="">
-                                <span>Nhật Bản</span>
-                            </label>
-                        </div>
-                        <div class="input">
-                            <input type="checkbox">
-                            <label for="">Hoa kì</span>
-                            </label>
-                        </div>
-                        <div class="input">
-                            <input type="checkbox">
-                            <label for="">Trung Quốc</span>
-                            </label>
-                        </div>
-                        <div class="input">
-                            <input type="checkbox">
-                            <label for="">Hưng Yên</span>
-                            </label>
-                        </div>
-                        <hr>
+                        </div>              
                     </div>
                     <div class="for_age">
                         <h3 style="padding-bottom: 10px;">Độ tuổi</h3>
@@ -353,35 +298,17 @@ require_once "header.php";
                             <label for="">30+</span>
                             </label>
                         </div>
-                        <hr>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="right">
-            <div class="right_banner">
-                <img src="img/banner1.webp" alt="#">
-            </div>
             <div class="right_content">
                 <div class="title">
-                    <h1>Tất cả sản phẩm</h1>
-                    <hr>
+                    <h2 style="padding: 5px 10px;color:#CB2227">TẤT CẢ SẢN PHẨM</h2>
                 </div>
                 <div class="products">
-                    <div class="book">
-                        <img src="img/tieuthuyet.webp" alt="">
-                        <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                        <p>40.000đ</p>
-                        <p>-20%</p>
-                        <p><del>50.000đ</del></p>
-                    </div>
-                    <div class="book">
-                        <img src="img/tieuthuyet.webp" alt="">
-                        <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                        <p>40.000đ</p>
-                        <p>-20%</p>
-                        <p><del>50.000đ</del></p>
-                    </div>
                     <div class="book">
                         <img src="img/tieuthuyet.webp" alt="">
                         <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
@@ -513,7 +440,6 @@ require_once "header.php";
         </div>
     </div>
 </body>
-</html>
 
 <?php
 include_once "footer.php";

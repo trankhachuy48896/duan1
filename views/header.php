@@ -10,11 +10,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <header id="header">
-=======
     <header>
->>>>>>> 285ad268ba15bfabc44d2ef7c4c4c425a48490d7
         <section class="header">
             <div class="logo-header">
                 <a href="index.php"><img src="img/fahasa-logo.webp" alt=""></a>
@@ -23,11 +19,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
-<<<<<<< HEAD
                     <li><a href="?ctl=store">Cửa Hàng</a></li>
-=======
-                    <li><a href="#">Cửa Hàng</a></li>
->>>>>>> 285ad268ba15bfabc44d2ef7c4c4c425a48490d7
                     <li><a href="#">Bài Viết</a></li>
                     <li><a href="#">Liên Hệ</a></li>
                     <li><a href="#">Giới Thiệu</a></li>
