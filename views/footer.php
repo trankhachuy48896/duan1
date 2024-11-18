@@ -3,16 +3,6 @@
          <div class="logo-footer">
              <img src="img/fahasa-logo.webp" alt="">
          </div>
-         <div class="information">
-             <div class="infor-us">
-                 <h4>Thông tin</h4>
-                 <p><i class="fa-solid fa-location-dot"></i> P.Xuân Phương, Nam Tử Liêm, HN</p>
-                 <p><i class="fa-solid fa-phone"></i> 1900636467</p>
-                 <p><i class="fa-regular fa-envelope"></i> cskh@fahasa.com.vn</p>
-             </div>
-
-
-
              <div class="information">
                  <div class="infor-us">
                      <h4>Thông tin</h4>
@@ -20,7 +10,6 @@
                      <p><i class="fa-solid fa-phone"></i> 1900636467</p>
                      <p><i class="fa-regular fa-envelope"></i> cskh@fahasa.com.vn</p>
                  </div>
-
                  <div class="infor-us">
                      <h4>Dịch vụ</h4>
                      <p>Điều khoản sử dụng</p>

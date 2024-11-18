@@ -31,8 +31,4 @@ function view_admin($view, $data = [])
     extract($data);
     include_once "../admin/views_admin/$view.php";
 }
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> b4d82b3342bac434d7a67e5e87737110aa6d6a67
