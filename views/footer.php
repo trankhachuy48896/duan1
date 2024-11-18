@@ -25,9 +25,9 @@
                      <p>Chính sách khách sỉ</p>
                  </div>
              </div>
-         </div>
+    </div>
 
-     </footer>
+    </footer>
 
      </body>
 

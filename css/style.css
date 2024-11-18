@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* Phần header */
 header {
     width: 100%;
@@ -96,13 +97,13 @@ header {
 main {
     background-color: rgb(241, 241, 241);
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* Phần banner */
 .banner {
     width: 80%;
     display: flex;
-    padding-top: 20px;
 }
 
 .banner img {
@@ -381,6 +382,7 @@ footer {
 .information {
     display: flex;
     line-height: 35px;
+       
 }
 
 .information .infor-us p {
@@ -590,6 +592,170 @@ footer {
     transform: scale(0.95);
 }
 
+/* Trang giỏ hàng */
+.gio_hang{
+    width: 80%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+.gio_hang h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #CB2227;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+.table_gio_hang {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+thead th {
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+    color: #555;
+}
+
+
+td img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+td p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Nút và input số lượng */
+td button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 30px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+td button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Biểu tượng xóa */
+td a {
+    color: #CB2227;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    display: inline-flex;
+    /* Đảm bảo căn giữa biểu tượng */
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    /* Kích thước vòng tròn */
+    height: 25px;
+    border-radius: 50%;
+    /* Biến phần tử thành hình tròn */
+    background-color: #f9f9f9;
+    /* Nền trắng hoặc màu tùy chỉnh */
+    border: 1px solid #CB2227;
+    /* Viền bao quanh */
+    text-decoration: none;
+    /* Xóa gạch chân nếu có */
+}
+
+td a:hover {
+    color: #fff;
+    background-color: #a81b22;
+    /* Màu nền khi hover */
+    border-color: #a81b22;
+    /* Đổi màu viền khi hover */
+}
+
+.thongtin_giohang{
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+.tongtien h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #CB2227;
+    margin-bottom: 15px;
+    text-align: center;
+    /* Căn giữa tiêu đề */
+}
+
+
+.tongtien p {
+    display: flex;
+    justify-content: space-between;
+    /* Căn hai phần của nội dung sang hai bên */
+    font-size: 15px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.tongtien button {
+    width: 100%;
+    /* Chiều rộng nút bằng với phần tử cha */
+    background-color: #CB2227;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tongtien button:hover {
+    background-color: #a81b22;
+}
 
 
 

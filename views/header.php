@@ -19,7 +19,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
-                    <li><a href="?ctl=store">Cửa Hàng</a></li>
+                    <li><a href="index.php?ctl=store">Cửa Hàng</a></li>
                     <li><a href="#">Bài Viết</a></li>
                     <li><a href="#">Liên Hệ</a></li>
                     <li><a href="#">Giới Thiệu</a></li>
@@ -27,14 +27,14 @@
             </div>
 
                 <div class="form-timkiem">
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" placeholder="Tìm kiếm..." id="keyword">
+                    <button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
 
                 <div class="item">
                     <ul>
                         <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="#" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
                 </div>
             </section>

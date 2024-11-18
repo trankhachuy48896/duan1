@@ -2,11 +2,12 @@
 require_once "header.php";
 ?>
 <link rel="stylesheet" href="css/store_css.css">
+
 <body>
     <div class="container">
-        <div class="left">        
+        <div class="left">
             <div class="left_content">
-                <div class="choose">                
+                <div class="choose">
                     <div class="select">
                         <h3 style="padding-bottom: 10px;">Giá tiền</h3>
                         <div class="input">
@@ -39,7 +40,7 @@ require_once "header.php";
                                 <span>700.000 trở lên</span>
                             </label>
                         </div>
-                        
+
                     </div>
                     <div class="categories">
                         <h3 style="padding-bottom: 10px;">Thể loại</h3>
@@ -223,7 +224,7 @@ require_once "header.php";
                                 <span>Young Adult</span>
                             </label>
                         </div>
-                        
+
                     </div>
                     <div class="publisher">
                         <h3 style="padding-bottom: 10px;">Nhà xuất bản</h3>
@@ -267,7 +268,7 @@ require_once "header.php";
                             <input type="checkbox">
                             <label for="">Fisrt News</span>
                             </label>
-                        </div>              
+                        </div>
                     </div>
                     <div class="for_age">
                         <h3 style="padding-bottom: 10px;">Độ tuổi</h3>
@@ -298,7 +299,7 @@ require_once "header.php";
                             <label for="">30+</span>
                             </label>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -310,11 +311,13 @@ require_once "header.php";
                 </div>
                 <div class="products">
                     <div class="book">
-                        <img src="img/tieuthuyet.webp" alt="">
-                        <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                        <p>40.000đ</p>
-                        <p>-20%</p>
-                        <p><del>50.000đ</del></p>
+                        <a href="index.php?ctl=chi_tiet">
+                            <img src="img/tieuthuyet.webp" alt="">
+                            <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
+                            <p>40.000đ</p>
+                            <p>-20%</p>
+                            <p><del>50.000đ</del></p>
+                        </a>
                     </div>
                     <div class="book">
                         <img src="img/tieuthuyet.webp" alt="">
