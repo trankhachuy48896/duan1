@@ -6,7 +6,7 @@ document.getElementById('add_danhmuc').addEventListener('submit', () => {
     const errorMessage = document.getElementById("errorMessage");
     
     errorMessage.innerHTML = "";
-    if(image.length === 0 || add_tenDanhMuc.value === ""){
+    if(image.length === 0 || add_tenDanhMuc.value.trim() === ""){
         event.preventDefault();
         errorMessage.innerHTML = "Chưa đặt tên hoặc chọn ảnh";
     }

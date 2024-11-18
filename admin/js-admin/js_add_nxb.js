@@ -4,7 +4,7 @@ document.getElementById('add_nxb').addEventListener('submit', () => {
     const errorMessage = document.getElementById("errorMessage");
     
     errorMessage.innerHTML = "";
-    if(add_tenNxb.value === ""){
+    if(add_tenNxb.value.trim() === ""){
         event.preventDefault();
         errorMessage.innerHTML = "Chưa đặt tên nhà xuất bản";
     }
