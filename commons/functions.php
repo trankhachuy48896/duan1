@@ -1,3 +1,4 @@
+<!-- commons/functions.php -->
 <?php
 
 function connection()
@@ -17,11 +18,17 @@ function connection()
     }
 }
 
-
+// Render view client
 function view($view, $data = [])
 {
     extract($data);
     include_once "views/$view.php";
 }
 
+// Render view admin
+function view_admin($view, $data = [])
+{
+    extract($data);
+    include_once "../admin/views_admin/$view.php";
+}
 ?>

@@ -1,0 +1,276 @@
+/* admin/css/style_admin.css */
+
+
+/* Đặt toàn bộ trang */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Phần sidebar bên trái */
+.sidebar {
+    width: 20%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu ul li {
+    display: flex;
+    /* Hiển thị các phần tử ngang hàng */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin: 15px 0;
+}
+
+.menu ul li i {
+    margin-right: 10px;
+    /* Khoảng cách giữa biểu tượng và văn bản */
+    font-size: 16px;
+    /* Kích thước biểu tượng */
+    color: white;
+    /* Màu biểu tượng */
+}
+
+.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #495057;
+}
+/* Phần nội dung bên phải */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.table-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-section h2 {
+    margin-bottom: 15px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.data-table img {
+    width: 60px;
+    /* Chiều rộng ảnh */
+    height: auto;
+    /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    border-radius: 5px;
+    /* Bo góc nhẹ nếu cần */
+    object-fit: cover;
+    /* Cắt ảnh nếu kích thước không phù hợp */
+    display: block;
+    /* Đảm bảo ảnh nằm trong một khối */
+}
+
+
+
+.data-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Định dạng chung cho thẻ <a> */
+.data-table a {
+    display: inline-block;
+    /* Giúp thẻ <a> giống như nút */
+    padding: 6px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    border-radius: 4px;
+    /* Bo góc */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 5px;
+    /* Khoảng cách giữa các nút */
+}
+
+/* Thẻ "Thêm" trong tiêu đề */
+.data-table th a {
+    background-color: #28a745;
+    /* Màu xanh lá */
+    color: white;
+    font-weight: bold;
+}
+
+.data-table th a:hover {
+    background-color: #218838;
+    /* Màu xanh lá đậm hơn khi hover */
+}
+
+/* Thẻ "Sửa" */
+.data-table td a:nth-child(1) {
+    /* Chọn thẻ <a> đầu tiên trong <td> */
+    background-color: #ffc107;
+    /* Màu vàng */
+    color: black;
+}
+
+.data-table td a:nth-child(1):hover {
+    background-color: #e0a800;
+    /* Màu vàng đậm hơn khi hover */
+}
+
+/* Thẻ "Xóa" */
+.data-table td a:nth-child(2) {
+    /* Chọn thẻ <a> thứ hai trong <td> */
+    background-color: #dc3545;
+    /* Màu đỏ */
+    color: white;
+}
+
+.data-table td a:nth-child(2):hover {
+    background-color: #c82333;
+    /* Màu đỏ đậm hơn khi hover */
+}
+
+
+/* Form Thêm Danh Mục */
+.form-add{
+    width: 80%;
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.form-add h2{
+    margin-bottom: 15px;
+}
+
+/* Thẻ input và file */
+.form-add input[type="text"],
+.form-add input[type="file"],
+.form-add input[type="number"],
+.form-add input[type="password"],
+.form-add input[type="email"],
+.form-add textarea,
+.form-add select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Thẻ button */
+.form-add button[type="submit"] {
+    width: 120px;
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    /* Màu xanh lá */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-add button[type="submit"]:hover {
+    background-color: #218838;
+    /* Màu xanh lá đậm hơn khi hover */
+}
+
+/* Cải thiện kiểu dáng cho các phần tử trong form */
+.form-add input[type="text"],
+.form-add input[type="file"],
+.form-add input[type="number"],
+.form-add input[type="password"],
+.form-add input[type="email"],
+.form-add textarea,
+.form-add select {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(49, 49, 49);
+}
+
+/* Thêm khoảng cách giữa các phần tử trong form */
+.form-add input[type="text"],
+.form-add input[type="file"],
+.form-add input[type="number"],
+.form-add input[type="password"],
+.form-add input[type="email"],
+.form-add button[type="submit"] {
+    margin-bottom: 20px;
+}
+
+/* Hiệu ứng focus cho trường nhập liệu */
+.form-add input[type="text"]:focus,
+.form-add input[type="file"]:focus,
+.form-add input[type="number"]:focus,
+.form-add button[type="submit"]:focus,
+.form-add input[type="password"]:focus,
+.form-add input[type="email"]:focus,
+.form-add textarea:focus,
+.form-add select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
