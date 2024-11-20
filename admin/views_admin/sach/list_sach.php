@@ -43,7 +43,7 @@
                         </td>
                         <td>
                             <a href="index.php?ctl=edit_sach&id_sp=<?= $product['id_sp'] ?>">Sửa</a>
-                            <a onclick="return confirm('Bnạ có chắc chắn muốn xóa?')" href="index.php?ctl=delete_sach&id_sp=<?= $product['id_sp'] ?>">Xóa</a>
+                            <a onclick="return confirm('Bạn có chắc chắn muốn xóa?')" href="index.php?ctl=delete_sach&id_sp=<?= $product['id_sp'] ?>">Xóa</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

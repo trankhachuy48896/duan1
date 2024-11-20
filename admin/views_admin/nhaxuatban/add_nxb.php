@@ -1,8 +1,8 @@
 <?php include_once "views_admin/header_admin.php" ?>
 <div class="form-add">
     <h2>Thêm nhà xuất bản</h2>
-    <form action="" method="post" enctype="multipart/form-data" id="add_nxb">
-        Tên nhà xuất bản: <input type="text" name="" id="add_tenNxb">
+    <form action="index.php?ctl=add_nxb" method="post" enctype="multipart/form-data" id="add_nxb">
+        Tên nhà xuất bản: <input type="text" name="name_nxb" id="add_tenNxb">
         <button type="submit">Thêm</button>
         <br>
         <span id="errorMessage" style="color: red;"></span>

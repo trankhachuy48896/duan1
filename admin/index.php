@@ -7,6 +7,7 @@ require_once "../commons/functions.php";
 require_once "models_admin/dm_adminModel.php";
 require_once "models_admin/sach_adminModel.php";
 require_once "models_admin/nxb_adminModel.php";
+require_once "models_admin/tg_adminModel.php";
 
 require_once "controllers_admin/adminController.php";
 require_once "controllers_admin/dm_adminController.php";
@@ -35,9 +36,9 @@ match ($ctl) {
     // Sách
     "list_sach" => (new sach_adminController)->list_Sach(),
     "form_add_sach" => (new sach_adminController)->form_add_sach(),
-    "add_sach" => (new sach_adminController) -> add_sach(),
+    "add_sach" => (new sach_adminController)->add_sach(),
     "edit_sach" => (new sach_adminController)->edit_sach(),
-    "delete_sach" => (new sach_adminController) -> delete_sach(),
+    "delete_sach" => (new sach_adminController)->delete_sach(),
     // Tài khoản
     "list_tk" => (new tk_adminController)->list_tk(),
     "form_add_tk" => (new tk_adminController)->form_add_tk(),
@@ -48,10 +49,14 @@ match ($ctl) {
     "list_tg" => (new tg_adminController)->list_tg(),
     "form_add_tg" => (new tg_adminController)->form_add_tg(),
     "edit_tg" => (new tg_adminController)->edit_tg(),
+    "add_tg" => (new tg_adminController)->add_tg(),
+    "delete_tg" => (new tg_adminController)->delete_tg(),
     // Nhà xuất bản
     "list_nxb" => (new nxb_adminController)->list_nxb(),
     "form_add_nxb" => (new nxb_adminController)->form_add_nxb(),
+    "add_nxb" => (new nxb_adminController)->add_nxb(),
     "edit_nxb" => (new nxb_adminController)->edit_nxb(),
+    "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
     default => view('../404'),

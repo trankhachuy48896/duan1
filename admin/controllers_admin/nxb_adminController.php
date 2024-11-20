@@ -2,9 +2,11 @@
 
 class nxb_adminController
 {
+    // Truyền dữ liệu vào trong views_admin
     public function list_nxb()
     {
-        view_admin("nhaxuatban/list_nxb");
+        $publishers = (new nxb_adminModel)->all_nxb();
+        view_admin("nhaxuatban/list_nxb", ['publishers' => $publishers]);
     }
 
     public function form_add_nxb()
@@ -12,8 +14,32 @@ class nxb_adminController
         view_admin("nhaxuatban/add_nxb");
     }
 
+    public function add_nxb()
+    {
+        $publisher = $_POST;
+        (new nxb_adminModel)->add_nxb($publisher);
+        header('location: index.php?ctl=list_nxb');
+        die;
+    }
+
     public function edit_nxb()
     {
-        view_admin("nhaxuatban/edit_nxb");
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $publisher = $_POST;
+            (new nxb_adminModel)->update_nxb($publisher);
+            header('location: index.php?ctl=list_nxb');
+            die;
+        }
+        $id_nxb = $_GET['id_nxb'];
+        $publisher = (new nxb_adminModel)->find_one_nxb($id_nxb);
+        view_admin("nhaxuatban/edit_nxb", ['publisher' => $publisher]);
+    }
+
+    public function delete_nxb()
+    {
+        $id_nxb = $_GET['id_nxb'];
+        (new nxb_adminModel)->delete_nxb($id_nxb);
+        header("location: index.php?ctl=list_nxb");
+        die;
     }
 }

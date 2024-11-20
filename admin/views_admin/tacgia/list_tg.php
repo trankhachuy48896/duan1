@@ -14,14 +14,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Phạm Gia Bảo</td>
-                    <td>
-                        <a href="index.php?ctl=edit_tg">Sửa</a>
-                        <a href="#">Xóa</a>
-                    </td>
-                </tr>
+                <?php foreach ($authors as $author) : ?>
+                    <tr>
+                        <td><?= $author['id_tg'] ?></td>
+                        <td><?= $author['name_tg'] ?></td>
+                        <td>
+                            <a href="index.php?ctl=edit_tg&id_tg=<?= $author['id_tg'] ?>">Sửa</a>
+                            <a onclick="return confirm('Bạn có chắc chắn muốn xóa?')" href="index.php?ctl=delete_tg&id_tg=<?= $author['id_tg'] ?>">Xóa</a>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
                 <!-- Thêm các hàng khác ở đây -->
             </tbody>
         </table>
