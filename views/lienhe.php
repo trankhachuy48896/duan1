@@ -1,3 +1,4 @@
+<?php include_once "header.php" ?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -217,5 +218,8 @@ footer p {
     <footer>
         <p>&copy; 2024 Thế giới sách - Bạn và to</p>
     </footer>
+    
 </body>
 </html>
+
+<?php include_once "footer.php" ?>

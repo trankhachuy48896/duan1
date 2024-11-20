@@ -119,4 +119,4 @@ Mỗi trang web bán sách đều có một lượng khách hàng trung thành r
         <p>&copy; 2024 Web Bán Sách. Tất cả quyền được bảo lưu.</p>
     </footer>
 
-    
+    <?php include_once "footer.php" ?>

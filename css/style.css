@@ -5,16 +5,10 @@
 }
 
 body {
-<<<<<<< HEAD
-    font-family: 'Roboto';
-}
-
-=======
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 /* Phần header */
 header {
     width: 100%;
@@ -103,20 +97,13 @@ header {
 main {
     background-color: rgb(241, 241, 241);
     padding-bottom: 20px;
-<<<<<<< HEAD
-=======
     padding-top: 20px;
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 }
 
 /* Phần banner */
 .banner {
     width: 80%;
     display: flex;
-<<<<<<< HEAD
-    padding-top: 20px;
-=======
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 }
 
 .banner img {
@@ -222,13 +209,10 @@ article h2 {
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
-=======
 .books .book a {
     text-decoration: none;
 }
 
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 .book {
     width: calc(20% - 16px);
     box-sizing: border-box;
@@ -398,10 +382,7 @@ footer {
 .information {
     display: flex;
     line-height: 35px;
-<<<<<<< HEAD
-=======
        
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 }
 
 .information .infor-us p {
@@ -413,14 +394,6 @@ footer {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-/* Form login */
-
-.form{
-    background-color: rgb(241, 241, 241);
-    
-=======
 /* Chi tiết sản phẩm */
 .chitiet {
     display: flex;
@@ -790,16 +763,11 @@ td a:hover {
 .form {
     background-color: rgb(241, 241, 241);
 
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
 }
 
 
 .form_login {
-<<<<<<< HEAD
-    width: 30%; 
-=======
     width: 30%;
->>>>>>> b887d71bf619f6dd1aa005e609dd6a687e715b58
     padding: 30px;
 }
 
