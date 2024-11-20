@@ -1,24 +1,28 @@
 <?php include_once "views_admin/header_admin.php" ?>
 <div class="form-add">
     <h2>Cập nhập sách</h2>
-    <form action="" method="post" enctype="multipart/form-data">
-        Tên sách: <input type="text" name="" id="" required>
-        Giá: <input type="number" name="" id="" min="0" required>
-        Số lượng: <input type="number" name="" id="" min="0" required>
+    <form action="" method="post" enctype="multipart/form-data" id="edit_sach">
+        Tên sách: <input type="text" name="" id="edit_sach_ten">
+        Giá: <input type="number" name="" id="edit_sach_gia" min="0">
+        Số lượng: <input type="number" name="" id="edit_sach_soLuong" min="0">
         Mô tả: <textarea name="" id="" rows="6"></textarea>
-        Ảnh: <input type="file" name="" id="" required>
-        Thuộc danh mục: <select name="" id="">
-            <option value="">Trinh thám</option>
-            <option value="">Kinh dị</option>
-            <option value="">Tiểu thuyết</option>
+        Ảnh: <input type="file" name="" id="edit_sach_anh">
+        Thuộc danh mục: <select name="" id="edit_sach_danhMuc" value="0">
+            <option value="0">Lựa chọn</option>
+            <option value="1">Trinh thám</option>
+            <option value="2">Kinh dị</option>
+            <option value="3">Tiểu thuyết</option>
         </select>
-        Nhà xuất bản: <select name="" id="">
-            <option value="">Kim Đồng</option>
-            <option value="">Ngôi Sao</option>
-            <option value="">Tự truyện</option>
+        Nhà xuất bản: <select name="" id="edit_sach_nxb" value="0">
+            <option value="0">Lựa chọn</option>
+            <option value="1">Kim Đồng</option>
+            <option value="2">Ngôi Sao</option>
+            <option value="3">Tự truyện</option>
         </select>
         <button type="submit">Cập nhập</button>
+        <br>
+        <span id="errorMessage" style="color: red;"></span>
     </form>
 </div>
-
+<script src="js-admin/js_edit_sach.js"></script>
 <?php include_once "views_admin/footer_admin.php" ?>

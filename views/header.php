@@ -27,8 +27,8 @@
             </div>
 
                 <div class="form-timkiem">
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" placeholder="Tìm kiếm..." id="keyword">
+                    <button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
 
                 <div class="item">

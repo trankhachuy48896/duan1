@@ -9,7 +9,7 @@ require_once "header.php";
             <div class="left_content">
                 <div class="choose">
                     <div class="select">
-                        <h3 style="padding-bottom: 10px;">Giá tiền:</h3>
+                        <h3 style="padding-bottom: 10px;">Giá tiền</h3>
                         <div class="input">
                             <input type="checkbox">
                             <label for="">

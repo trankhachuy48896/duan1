@@ -10,7 +10,6 @@
                      <p><i class="fa-solid fa-phone"></i> 1900636467</p>
                      <p><i class="fa-regular fa-envelope"></i> cskh@fahasa.com.vn</p>
                  </div>
-
                  <div class="infor-us">
                      <h4>Dịch vụ</h4>
                      <p>Điều khoản sử dụng</p>
