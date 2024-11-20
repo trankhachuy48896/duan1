@@ -4,6 +4,8 @@
 require_once "../commons/env.php";
 require_once "../commons/functions.php";
 require_once "models_admin/dm_adminModel.php";
+require_once "models_admin/sach_adminModel.php";
+require_once "models_admin/nxb_adminModel.php";
 require_once "controllers_admin/adminController.php";
 require_once "controllers_admin/dm_adminController.php";
 require_once "controllers_admin/sach_adminController.php";
@@ -31,7 +33,9 @@ match ($ctl) {
     // Sách
     "list_sach" => (new sach_adminController)->list_Sach(),
     "form_add_sach" => (new sach_adminController)->form_add_sach(),
+    "add_sach" => (new sach_adminController) -> add_sach(),
     "edit_sach" => (new sach_adminController)->edit_sach(),
+    "delete_sach" => (new sach_adminController) -> delete_sach(),
     // Tài khoản
     "list_tk" => (new tk_adminController)->list_tk(),
     "form_add_tk" => (new tk_adminController)->form_add_tk(),

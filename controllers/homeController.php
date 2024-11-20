@@ -2,6 +2,7 @@
 
 class homeController{
     public function index() {
-        view("home");
+        $danhmuc = (new danhmuc)->dm_client();
+        view("home", ['danhmuc' => $danhmuc]);
     }
 }

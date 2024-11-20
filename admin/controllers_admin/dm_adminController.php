@@ -11,7 +11,6 @@ class dm_adminController {
     // Xử lý thêm danh mục
     public function add_dm() {
         $categories = $_POST;
-        $categories['status_dm'] = (int) $categories['status_dm'];
         // echo "<pre>";
         // var_dump($categories);
         $img_dm = "";
@@ -21,7 +20,8 @@ class dm_adminController {
             move_uploaded_file($file_anh['tmp_name'], $img_dm);
         }
         $categories['img_dm'] = $img_dm;
-       (new dm_adminModel)->add_DM($categories);
+        $categories['status_dm'] = (int) $categories['status_dm'];
+        (new dm_adminModel)->add_DM($categories);
         header("location: index.php");
         die;
     }

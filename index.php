@@ -4,6 +4,7 @@
 
 require_once "commons/env.php";
 require_once "commons/functions.php";
+require_once "models/danhmuc.php";
 require_once "controllers/homeController.php";
 require_once "controllers/khachhangController.php";
 require_once "controllers/storeController.php";

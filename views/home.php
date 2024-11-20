@@ -18,32 +18,16 @@
     <div class="category">
         <h2>DANH MỤC SẢN PHẨM</h2>
         <hr>
+
         <ul>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Tâm lý</a></li>
-            </div>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Tiểu thuyết</a></li>
-            </div>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Văn học</a></li>
-            </div>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Kinh tế</a></li>
-            </div>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Tâm linh-Tôn giáo</a></li>
-            </div>
-            <div class="img-danhmuc">
-                <img src="img/tieuthuyet.webp" alt="">
-                <li><a href="#">Anime-Manga</a></li>
-            </div>
+            <?php foreach ($danhmuc as $danhmuc) : ?>
+                <div class="img-danhmuc">
+                    <img src="img/<?= $danhmuc['img_dm'] ?>" alt="">
+                    <li><a href="#"><?= $danhmuc['name_dm'] ?></a></li>
+                </div>
+            <?php endforeach ?>
         </ul>
+
     </div>
 
 
