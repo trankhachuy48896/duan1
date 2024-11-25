@@ -41,10 +41,13 @@
     <div class="danh_gia">
         <h2>ĐÁNH GIÁ SẢN PHẨM</h2>
         <hr>
-        <form action="">
-            <input type="text"  placeholder="Nhập nhận xét của bạn về sản phẩm">
-            <button>Gửi nhận xét</button>
-        </form>
+        <form action="index.php?controller=bl_admin&action=list_bl" method="POST" class="comment-form">
+  
+
+    <button type="submit" name="submit_comment">Gửi nhận xét</button>
+</form>
+
+      
     </div>
     
 </main>
