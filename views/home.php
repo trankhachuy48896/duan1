@@ -22,8 +22,11 @@
         <ul>
             <?php foreach ($danhmuc as $danhmuc) : ?>
                 <div class="img-danhmuc">
-                    <img src="img/<?= $danhmuc['img_dm'] ?>" alt="">
-                    <li><a href="#"><?= $danhmuc['name_dm'] ?></a></li>
+                    <a href="index.php?ctl=danhmuc_sach&id_dm=<?= $danhmuc['id_dm'] ?>">
+                        <img src="img/<?= $danhmuc['img_dm'] ?>" alt="">
+                        <li><?= $danhmuc['name_dm'] ?></li>
+                    </a>
+
                 </div>
             <?php endforeach ?>
         </ul>
@@ -35,154 +38,59 @@
         <h2>SẢN PHẨM</h2>
         <hr>
         <div class="books">
-            <div class="book">
-                <a href="index.php?ctl=chi_tiet">
-                    <img src="img/tieuthuyet.webp" alt="">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                    <p>40.000đ</p>
-                    <p>-20%</p>
-                    <p><del>50.000đ</del></p>
-                </a>
-            </div>
+            <?php foreach ($sach as $sach) : ?>
+                <div class="book">
+                    <a href="index.php?ctl=chi_tiet&id_sp=<?= $sach['id_sp'] ?>">
+                        <img src="img/<?= $sach['img_sp'] ?>" alt="">
+                        <h4><?= $sach['name_sp'] ?></h4>
+                        <p><?= number_format($sach['price_sp'], 0, '', '.') ?>đ</p>
+                        <p>-20%</p>
+                        <p><del>50.000đ</del></p>
+                    </a>
+                </div>
+            <?php endforeach ?>
 
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
-
-            <div class="book">
-                <img src="img/tieuthuyet.webp" alt="">
-                <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                <p>40.000đ</p>
-                <p>-20%</p>
-                <p><del>50.000đ</del></p>
-            </div>
         </div>
 
-
     </article>
+
+    <div class="new-products">
+        <h2>Sản phẩm mới</h2>
+        <hr>
+
+        <ul>
+            <?php foreach ($new_sp as $sach) : ?>
+                <div class="new-product-item">
+                    <a href="index.php?ctl=chi_tiet&id_sp=<?= $sach['id_sp'] ?>">
+                        <p class="new">NEW</p>
+                        <img src="img/<?= $sach['img_sp'] ?>" alt="">
+                        <li><?= $sach['name_sp'] ?></li>
+                    </a>
+                </div>
+            <?php endforeach ?>
+        </ul>
+    </div>
 
     <div class="top-products">
         <h2>TOP SẢN PHẨM YÊU THÍCH</h2>
         <hr>
-        <div class="top-products-wrapper">
-            <!-- Bên trái: Thứ tự, hình ảnh và tên sách -->
-            <div class="top-products-left">
-                <div class="top-product-item">
-                    <div class="rank">1</div>
-                    <img src="img/tieuthuyet.webp">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                </div>
-                <div class="top-product-item">
-                    <div class="rank">2</div>
-                    <img src="img/tieuthuyet.webp">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                </div>
-                <div class="top-product-item">
-                    <div class="rank">3</div>
-                    <img src="img/tieuthuyet.webp">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                </div>
-                <div class="top-product-item">
-                    <div class="rank">4</div>
-                    <img src="img/tieuthuyet.webp">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                </div>
-                <div class="top-product-item">
-                    <div class="rank">5</div>
-                    <img src="img/tieuthuyet.webp">
-                    <h4>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h4>
-                </div>
-            </div>
 
-            <!-- Bên phải: Chi tiết sách -->
-            <div class="top-products-right">
-                <div class="top-product-detail">
-                    <img src="img/tieuthuyet.webp" alt="Book 1">
-                    <div class="book-info">
-                        <h3>Tâm Lý Học Tội Phạm - Phác Họa Chân Dung Kẻ Phạm Tội</h3>
-                        <p>Tác giả: <strong>Phạm Gia Bảo</strong></p>
-                        <p>Nhà xuất bản: <strong>Kim Đồng</strong> </p>
-                        <p>30.000đ</p>
-                        <p>-20%</p>
-                        <p><del>50.000đ</del></p>
-                        <p>“Người dọn dẹp hiện trường án mạng” - Góc khuất đằng sau nghề dọn dẹp hiện trường vụ án:
-                            đầy tính nhân văn nhưng cũng
-                            hết sức thảm khốc.
+        <ul>
+            <?php foreach ($top_sp as $index => $sach) : ?>
+                <div class="top-product-item">
+                    <a href="index.php?ctl=chi_tiet&id_sp=<?= $sach['id_sp'] ?>">
+                        <div class="rank"><?= $index + 1 ?></div> <!-- Hiển thị thứ tự (index bắt đầu từ 0) -->
+                        <img src="img/<?= $sach['img_sp'] ?>">
+                        <li><?= $sach['name_sp'] ?></li>
+                    </a>
 
-                            Nhiệm vụ của những nhân viên dọn dẹp hiện trường là làm sạch và khôi phục trạng thái của
-                            nơi xảy ra vụ án lại như ban
-                            đầu. Để hoàn thành việc dọn dẹp hiện trường, người trong nghề phải trải qua một khóa
-                            huấn luyện. Họ được cung cấp những
-                            kiến thức về cách xử lý hiện trường khi xảy ra các vụ gi…ết người, t…ự t…ử hay t…ai
-                            n…ạn... Họ luôn phải giữ cho tinh
-                            thần ổn định, sự can đảm, khả năng phục hồi khi bị "chấn thương" tâm lý bất chấp nơi cần
-                            xử lý sẽ phải kinh khủng đến
-                            mức nào. Hiển nhiên đây không phải công việc dành cho người "yếu tim".</p>
-                    </div>
                 </div>
-            </div>
-        </div>
+            <?php endforeach ?>
+        </ul>
+
     </div>
+
+
 </main>
 
 <?php include_once "footer.php" ?>

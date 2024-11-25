@@ -12,6 +12,7 @@
                     <th>Số lượng</th>
                     <th>Mô tả</th>
                     <th>Ảnh</th>
+                    <th>Lượt xem</th>
                     <th>Danh mục</th>
                     <th>Nhà xuất bản</th>
                     <th>Trạng thái</th>
@@ -26,10 +27,11 @@
                     <tr>
                         <td><?= $product['id_sp'] ?></td>
                         <td><?= $product['name_sp'] ?></td>
-                        <td><?= $product['price_sp'] ?></td>
+                        <td><?= $product['price_sp'] ?>đ</td>
                         <td><?= $product['quantity_sp'] ?></td>
                         <td><?= $product['describe_sp'] ?></td>
                         <td><img src="<?= $product['img_sp'] ?>" alt=""></td>
+                        <td><?= $product['views_sp'] ?></td>
                         <td><?= $product['name_dm'] ?></td>
                         <td><?= $product['name_nxb'] ?></td>
                         <td>

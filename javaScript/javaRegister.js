@@ -6,10 +6,11 @@ document.querySelector("register_form").addEventListener("submit", function (e) 
     const password_register = document.getElementById("password_register").value.trim();
     const verify_password = document.getElementById("verify_password").value.trim();
     const phoneNumer_register = document.getElementById("phoneNumer_register").value.trim();
+    const address_register = document.getElementById("phoneNumer_register").value.trim();
 
     let errorMessage = "";
 
-    if (!name || !email_register || !username_register || !password_register || !verify_password || !phoneNumer_register) {
+    if (!name || !email_register || !username_register || !password_register || !verify_password || !phoneNumer_register || !address_register) {
         e.preventDefault();
         errorMessage = "Vui lòng điền đầy đủ thông tin";
         return;
