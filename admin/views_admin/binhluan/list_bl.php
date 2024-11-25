@@ -7,29 +7,30 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Tên khách hàng</th>
-                    <th>Tên sản phẩm</th>
+                    <th>ID Sản phẩm</th>
+                    <th>ID Khách hàng</th>
+                    <th>Đánh giá</th>
                     <th>Nội dung</th>
                     <th>Ngày bình luận</th>
                     <th>Chức năng</th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($binhluan as $comment): ?>
                 <tr>
-                    <td>1</td>
-                    <td>Phạm Gia Bảo</td>
-                    <td>7 viên ngọc rồng</td>
-                    <td>10 điểm không có nhưng</td>
-                    <td>20/10/2024</td>
+                    <td><?php echo $comment['review_id']; ?></td>
+                    <td><?php echo $comment['id_sp']; ?></td>
+                    <td><?php echo $comment['id_kh']; ?></td>
+                    <td><?php echo $comment['rating']; ?></td>
+                    <td><?php echo $comment['comment']; ?></td>
+                    <td><?php echo $comment['created_at_review']; ?></td>
                     <td>
-                        <a href="#">Xóa</a>
+                        <a href="delete_comment.php?id=<?php echo $comment['review_id']; ?>">Xóa</a>
                     </td>
                 </tr>
-                <!-- Thêm các hàng khác ở đây -->
+                <?php endforeach; ?>
             </tbody>
         </table>
     </section>
 </main>
-</div>
-
 <?php include_once "views_admin/footer_admin.php" ?>
