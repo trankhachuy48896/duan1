@@ -19,10 +19,10 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
-                    <li><a href="?ctl=store">Cửa Hàng</a></li>
-                    <li><a href="?ctl=baiviet">Bài Viết</a></li>
-                    <li><a href="?ctl=lienhe">Liên Hệ</a></li>
-                    <li><a href="?ctl=gioithieu">Giới Thiệu</a></li>
+                    <li><a href="index.php?ctl=store">Cửa Hàng</a></li>
+                    <li><a href="index.php?ctl=baiviet">Bài Viết</a></li>
+                    <li><a href="index.php?ctl=lienhe">Liên Hệ</a></li>
+                    <li><a href="index.php?ctl=gioithieu">Giới Thiệu</a></li>
                 </ul>
             </div>
 
@@ -35,8 +35,14 @@
 
             <div class="item">
                 <ul>
-                    <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <?php if (isset($_SESSION['khachhang'])) : ?>
+                        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+                        <li><a href="index.php?ctl=logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <?php else : ?>
+                        <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <?php endif ?>
                 </ul>
             </div>
         </section>

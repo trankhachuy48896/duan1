@@ -1,7 +1,6 @@
-
 <!-- Trang client -->
 <?php
-
+session_start();
 require_once "commons/env.php";
 require_once "commons/functions.php";
 require_once "models/danhmuc.php";
@@ -24,25 +23,25 @@ require_once "controllers/giohangController.php";
 $ctl = $_GET['ctl'] ?? "";
 
 match ($ctl) {
-    "" => (new homeController) -> index(),
+    "" => (new homeController)->index(),
 
-    "baiviet" => (new binhluan) ->binhluan(),
-    "lienhe" => ( new lienhe) ->lienhe(),
-    "gioithieu" => ( new gioithieu) ->gioithieu(),
+    "baiviet" => (new binhluan)->binhluan(),
+    "lienhe" => (new lienhe)->lienhe(),
+    "gioithieu" => (new gioithieu)->gioithieu(),
 
-    "store" => (new store) -> store(),
+    "store" => (new store)->store(),
     // Form đăng ký, đăng nhập
-    "form_dangnhap" => (new khachhangController) -> form_login(),
-    "form_dangky" => (new khachhangController) -> form_sign_up(),
-    "add_dki" => (new khachhangController)-> sign_up(),
+    "form_dangnhap", "login" => (new khachhangController)->login(),
+    "form_dangky", "add_dki"  => (new khachhangController)->sign_up(),
+    "logout" => (new khachhangController) -> logout(),
     // Chi tiết sản phẩm
-    "chi_tiet" => (new sachController) -> chi_tiet(),
+    "chi_tiet" => (new sachController)->chi_tiet(),
     // Giỏ hàng
-    "gio_hang" => (new giohangController) -> gio_hang(),
+    "gio_hang" => (new giohangController)->gio_hang(),
     // Sản phẩm theo danh mục
-    "danhmuc_sach" => (new sachController) -> sachIndanhmuc(),
+    "danhmuc_sach" => (new sachController)->sachIndanhmuc(),
     // Tìm kiếm
-    "search" => (new sachController) -> search(),
+    "search" => (new sachController)->search(),
 
 
     default => view('404'),

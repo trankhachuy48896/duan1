@@ -14,9 +14,7 @@
                 <p><del>50.000đ</del></p>
                 <div class="soluong">
                     <label for="">Số lượng: </label>
-                    <button id="">-</button>
-                    <input type="text" value="1" readonly>
-                    <button id="">+</button>
+                    <input type="number" value="1" min="1" >
                 </div>
                 <button class="mua_ngay">MUA NGAY</button>
                 <button class="them_gio_hang">THÊM VÀO GIỎ HÀNG</button>

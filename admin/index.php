@@ -59,5 +59,7 @@ match ($ctl) {
     "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
+    // Logout
+    "logout" => (new adminController) -> logout(),
     default => view('../404'),
 };

@@ -15,8 +15,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <section class="user-info">
-                <img src="../img/tieuthuyet.webp" alt="User Photo" class="user-photo">
-                <h3 class="user-name">Admin Name</h3>
+                <img src="../img/fahasa-logo.webp" alt="User Photo" class="user-photo">
             </section>
             <nav class="menu">
                 <ul>
@@ -28,7 +27,7 @@
                     <li><i class="fa-solid fa-at"></i><a href="index.php?ctl=list_tg">Tác giả</a></li>
                     <li><i class="fa-solid fa-bookmark"></i><a href="index.php?ctl=list_nxb">Nhà xuất bản</a></li>
                     <li><i class="fa-solid fa-chart-simple"></i><a href="#">Thống kê</a></li>
-                    <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Đăng xuất</a></li>
+                    <li><i class="fa-solid fa-right-from-bracket"></i><a href="index.php?ctl=logout">Đăng xuất</a></li>
 
                 </ul>
             </nav>

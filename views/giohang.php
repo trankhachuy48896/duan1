@@ -20,9 +20,7 @@
                         126,000đ
                     </td>
                     <td>
-                        <button id="">-</button>
-                        <input type="text" value="1" readonly>
-                        <button id="">+</button>
+                        <input style="width: 60px" type="number" value="1" min="1">
                     </td>
                     <td>126,000đ</td>
                     <td>
@@ -37,10 +35,6 @@
     <div class="thongtin_giohang">
         <div class="tongtien">
             <h3>TỔNG TIỀN</h3>
-            <p class="item-info">
-                <span>Số lượng:</span>
-                <span>1 sản phẩm</span>
-            </p>
             <p class="item-info">
                 <span>Tổng:</span>
                 <span>126,000đ</span>
