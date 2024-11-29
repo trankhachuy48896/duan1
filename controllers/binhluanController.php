@@ -3,8 +3,8 @@ class binhluanController {
     public function add_bl() {
         if (isset($_POST['submit_comment'])) {
             // In dữ liệu gửi từ form ra để kiểm tra
-            var_dump($_POST);
-            die(); // Dừng chương trình để kiểm tra
+            // var_dump($_POST);
+            // die(); // Dừng chương trình để kiểm tra
     
             // Tiến hành xử lý nếu dữ liệu hợp lệ
             if (isset($_POST['id_sp'], $_POST['id_kh'], $_POST['rating'], $_POST['comment'])) {

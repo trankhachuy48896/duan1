@@ -1,53 +1,57 @@
 <?php include_once "header.php" ?>
 <main>
-    <div class="gio_hang">
-        <h2>GIỎ HÀNG</h2>
-        <hr>
-        <div class="table_gio_hang">
-            <table>
-                <thead>
-                    <th>Sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Số lượng</th>
-                    <th>Tổng</th>
-                </thead>
-                <tr>
-                    <td>
-                        <img src="img/tieuthuyet.webp" alt="">
-                        <p>Tiểu thuyết trinh thám</p>
-                    </td>
-                    <td>
-                        126,000đ
-                    </td>
-                    <td>
-                        <button id="">-</button>
-                        <input type="text" value="1" readonly>
-                        <button id="">+</button>
-                    </td>
-                    <td>126,000đ</td>
-                    <td>
-                        <a href="#"><i class="fa-solid fa-x"></i></a>
-                    </td>
-                </tr>
-            </table>
-
+    <form action="index.php?ctl=update_gh" method="POST">
+        <div class="gio_hang">
+            <h2>GIỎ HÀNG</h2>
+            <hr>
+            <div class="table_gio_hang">
+                <table>
+                    <thead>
+                        <th>#ID</th>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                    </thead>
+                    <?php foreach ($carts as $id_sp => $cart) : ?>
+                        <tr>
+                            <td>
+                                <?= $id_sp ?>
+                            </td>
+                            <td>
+                                <img src="img/<?= $cart['img_sp'] ?>" alt="" width="100px">
+                                <p><?= $cart['name_sp'] ?></p>
+                            </td>
+                            <td>
+                                <?= number_format($cart['price_sp']) ?>đ
+                            </td>
+                            <td>
+                                <input style="width: 60px" type="number" name="quantity_sp[<?= $id_sp ?>]" value="<?= $cart['quantity_sp']  ?>" min="1">
+                            </td>
+                            <td><?= number_format($cart['price_sp'] * $cart['quantity_sp']) ?>đ</td>
+                            <td>
+                                <a href="index.php?ctl=delete_gh&id_sp=<?= $id_sp ?>"><i class="fa-solid fa-x"></i></a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+                <div class="cap_nhap">
+                    <button type="submit">Cập nhập giỏ hàng</button>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="thongtin_giohang">
-        <div class="tongtien">
-            <h3>TỔNG TIỀN</h3>
-            <p class="item-info">
-                <span>Số lượng:</span>
-                <span>1 sản phẩm</span>
-            </p>
-            <p class="item-info">
-                <span>Tổng:</span>
-                <span>126,000đ</span>
-            </p>
-            <button>Thanh toán</button>
+        <div class="thongtin_giohang">
+            <div class="tongtien">
+                <h3>TỔNG TIỀN</h3>
+                <p class="item-info">
+                    <span>Tổng:</span>
+                    <span><?= number_format($sumPrice) ?>đ</span>
+                </p>
+                <a href="index.php?ctl=view_checkOut">Thanh toán</a>
+            </div>
         </div>
-    </div>
+    </form>
 </main>
 
 <?php include_once "footer.php" ?>

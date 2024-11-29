@@ -4,7 +4,7 @@ class BL_admin {
 
     // Kết nối cơ sở dữ liệu
     public function __construct() {
-        $this->conn = $this->connection(); // Kết nối thông qua phương thức connection()
+        $this->conn = connection(); // Kết nối thông qua phương thức connection()
     }
     // Thêm bình luận vào cơ sở dữ liệu
     public function addComment($id_sp, $id_kh, $rating, $comment) {

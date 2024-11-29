@@ -1,6 +1,6 @@
 <!-- trang admin -->
 <?php
-
+session_start();
 require_once "../commons/env.php";
 require_once "../commons/functions.php";
 
@@ -8,6 +8,7 @@ require_once "models_admin/dm_adminModel.php";
 require_once "models_admin/sach_adminModel.php";
 require_once "models_admin/nxb_adminModel.php";
 require_once "models_admin/tg_adminModel.php";
+require_once "models_admin/kh_adminModel.php";
 
 require_once "controllers_admin/adminController.php";
 require_once "controllers_admin/dm_adminController.php";
@@ -17,6 +18,7 @@ require_once "controllers_admin/bl_adminController.php";
 require_once "controllers_admin/tg_adminController.php";
 require_once "controllers_admin/nxb_adminController.php";
 require_once "controllers_admin/dh_adminController.php";
+require_once "controllers_admin/thongke_adminController.php";
 
 
 
@@ -42,7 +44,9 @@ match ($ctl) {
     // Tài khoản
     "list_tk" => (new tk_adminController)->list_tk(),
     "form_add_tk" => (new tk_adminController)->form_add_tk(),
+    "add_kh" => (new tk_adminController) -> add_tk(),
     "edit_tk" => (new tk_adminController)->edit_tk(),
+    "delete_tk" => (new tk_adminController) -> delete_tk(),
     // Bình luận
     "list_bl" => (new bl_adminController)->list_bl(),
     // Tác giả
@@ -59,5 +63,9 @@ match ($ctl) {
     "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
+    // Thống kê
+    "list_thongke" => (new thongke_adminController) -> list_thongke(),
+    // Logout
+    "logout" => (new adminController) -> logout(),
     default => view('../404'),
 };

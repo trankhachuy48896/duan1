@@ -35,7 +35,7 @@ header {
 }
 
 .header .form-timkiem input {
-    width: 300px;
+    width: 250px;
     height: 40px;
     padding-left: 10px;
     border-radius: 6px;
@@ -43,7 +43,7 @@ header {
 }
 
 .header .form-timkiem button {
-    width: 60px;
+    width: 50px;
     height: 40px;
     border-radius: 6px;
     border: none;
@@ -558,18 +558,6 @@ footer {
     font-weight: bold;
 }
 
-.soluong button {
-    width: 40px;
-    height: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
 .soluong input {
     width: 60px;
@@ -585,14 +573,6 @@ footer {
     pointer-events: none;
 }
 
-.soluong button:hover {
-    background-color: #e0e0e0;
-    color: #000;
-}
-
-.soluong button:active {
-    transform: scale(0.95);
-}
 
 .chitiet_right .mua_ngay,
 .chitiet_right .them_gio_hang {
@@ -796,6 +776,24 @@ td a:hover {
     /* Đổi màu viền khi hover */
 }
 
+.table_gio_hang .cap_nhap button {
+    background-color: rgb(0, 157, 0);
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.table_gio_hang .cap_nhap button:hover {
+    background-color: rgb(0, 118, 0);
+}
+
+
 .thongtin_giohang {
     width: 20%;
     background-color: #f9f9f9;
@@ -824,13 +822,15 @@ td a:hover {
     color: #333;
 }
 
-.tongtien button {
-    width: 100%;
-    /* Chiều rộng nút bằng với phần tử cha */
+.tongtien a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     background-color: #CB2227;
     color: #fff;
     border: none;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -840,7 +840,9 @@ td a:hover {
     transition: background-color 0.3s ease;
 }
 
-.tongtien button:hover {
+
+
+.tongtien a:hover {
     background-color: #a81b22;
 }
 
@@ -918,4 +920,160 @@ td a:hover {
 
 .form_login a:hover {
     text-decoration: underline;
+}
+
+/* Thanh toán */
+.donhang {
+    width: 80%;
+}
+
+.donhang h2{
+    color: #CB2227;
+    margin-bottom: 20px ;
+}
+
+.donhang hr{
+    margin-bottom: 20px;
+}
+
+.information {
+    gap: 20px;
+    
+}
+
+.information-user {
+    width: 60%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.information-user input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;   
+}
+
+.information-user input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.information-user input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+.information-cart {
+    width: 40%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Định dạng các sản phẩm trong giỏ hàng */
+.information-products {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.information-left,
+.information-right {
+    flex: 1;
+}
+
+.information-left{
+    line-height: 25px;
+}
+.information-left span
+{
+    font-size: 16px;
+    color: #333;
+}
+.information-left p
+{
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+.information-right p {
+    font-weight: bold;
+    color: #CB2227;
+    text-align: right;
+}
+
+.information-products .tongtien span{
+    color: #CB2227;
+    float: right;
+}
+
+/* Phần phương thức thanh toán */
+.information-pay {
+    width: 50%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+
+
+.information-pay input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.information-pay label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+.information-pay div {
+    margin-bottom: 10px;
+}
+
+
+.donhang button {
+    display: flex;
+    align-items: center;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donhang button:hover {
+    background-color: #218838;
+}
+
+
+.donhang button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
