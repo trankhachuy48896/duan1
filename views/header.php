@@ -36,12 +36,12 @@
             <div class="item">
                 <ul>
                     <?php if (isset($_SESSION['khachhang'])) : ?>
-                        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+                        <li><a href="index.php?ctl=form_update_user"><i class="fa-solid fa-circle-user"></i></a></li>
                         <li><a href="index.php?ctl=logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
-                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i>(<?= $_SESSION['totalQuantity'] ?? '0' ?>)</a></li>
                     <?php else : ?>
                         <li><a href="index.php?ctl=form_dangnhap" aria-label="User Profile"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="index.php?ctl=gio_hang" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i>(<?= $_SESSION['totalQuantity'] ?? '0' ?>)</a></li>
                     <?php endif ?>
                 </ul>
             </div>

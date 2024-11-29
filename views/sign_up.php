@@ -11,9 +11,6 @@ include "header.php";
             Địa chỉ email:
             <input type="email" name="email" id="" placeholder="Nhập email" required>
 
-            Tên đăng nhập:
-            <input type="text" name="username" id="" placeholder="Nhập tên đăng nhập" required>
-
             Mật khẩu:
             <input type="password" name="password" id="" placeholder="Nhập mật khẩu" required>
 

@@ -6,6 +6,7 @@ require_once "commons/functions.php";
 require_once "models/danhmuc.php";
 require_once "models/sach.php";
 require_once "models/khachhang.php";
+require_once "models/donhang.php";
 require_once "controllers/homeController.php";
 require_once "controllers/khachhangController.php";
 require_once "controllers/binhluanController.php";
@@ -38,11 +39,21 @@ match ($ctl) {
     "chi_tiet" => (new sachController)->chi_tiet(),
     // Giỏ hàng
     "gio_hang" => (new giohangController)->gio_hang(),
+    "add_gh" => (new giohangController) -> add_gh(),
+    "delete_gh" => (new giohangController) -> deleteProductInCart(),
+    "update_gh" => (new giohangController) -> updateCart(),
+    // Đơn hàng
+    "view_checkOut" => (new giohangController) -> viewThanhToan(),
+    "check_out" => (new giohangController) -> thanhToan(),
+    "success" => (new giohangController) -> success(),
     // Sản phẩm theo danh mục
     "danhmuc_sach" => (new sachController)->sachIndanhmuc(),
     // Tìm kiếm
     "search" => (new sachController)->search(),
-
-
+    // Cập nhập tài khoản khách hàng
+    "form_update_user" => (new khachhangController) -> update_user(),
+    "update_user" => (new khachhangController) -> update_user(),
+    
+   
     default => view('404'),
 };

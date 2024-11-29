@@ -1,15 +1,27 @@
 <?php
 require_once __DIR__ . '/../models_admin/bl_admin.php'; // Đảm bảo đường dẫn đúng
 
-class bl_adminController {
-    public function list_bl() {
+class bl_adminController
+{
+
+    // Chỉ cho phép người dùng đã đăng nhập và có quyền admin truy cập trang quản trị
+    public function __construct()
+    {
+        $khachhang = $_SESSION['khachhang'] ?? [];
+        if (!$khachhang || $khachhang['role'] != 1) {
+            return header("location: ../index.php");
+        }
+    }
+
+    public function list_bl()
+    {
         // Kiểm tra xem form đã được gửi chưa
         if (isset($_POST['submit_comment'])) {
             // Lấy dữ liệu từ form
-            $id_st = $_POST['id_st'];  
-            $id_kh = $_POST['id_kh'];  
-            $rating = $_POST['rating'];  
-            $comment = $_POST['comment'];  
+            $id_st = $_POST['id_st'];
+            $id_kh = $_POST['id_kh'];
+            $rating = $_POST['rating'];
+            $comment = $_POST['comment'];
 
             // Kiểm tra và validate dữ liệu
             if ($this->validateInput($id_st, $id_kh, $rating, $comment)) {
@@ -31,9 +43,9 @@ class bl_adminController {
     }
 
     // Hàm validate dữ liệu
-    private function validateInput($id_st, $id_kh, $rating, $comment) {
+    private function validateInput($id_st, $id_kh, $rating, $comment)
+    {
         // Kiểm tra các giá trị có hợp lệ không
         return is_numeric($id_st) && is_numeric($id_kh) && $rating >= 1 && $rating <= 5 && !empty($comment);
     }
 }
-?>

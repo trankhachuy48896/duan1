@@ -6,6 +6,11 @@ class sachController{
         $sach = (new sach) -> find_one($id_sp);
         // Cập nhập lượt xem
         (new sach)->update_luotXem($id_sp);
+
+        // Lưu thông tin URI vào session
+        $_SESSION['URI'] = $_SERVER['REQUEST_URI'];
+
+        $_SESSION['totalQuantity'] = (new giohangController) -> totalSumQuantity();
         view('chitiet', ['danhmuc' => $danhmuc, 'sach' => $sach]);
     }
 

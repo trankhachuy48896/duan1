@@ -12,13 +12,8 @@
                 <p><?= number_format($sach['price_sp'], 0, '', '.') ?>đ</p>
                 <p>-20%</p>
                 <p><del>50.000đ</del></p>
-                <div class="soluong">
-                    <label for="">Số lượng: </label>
-                    <input type="number" value="1" min="1" >
-                </div>
-                <button class="mua_ngay">MUA NGAY</button>
-                <button class="them_gio_hang">THÊM VÀO GIỎ HÀNG</button>
-                <p><?= $sach['describe_sp'] ?></p>
+                <a href="index.php?ctl=add_gh&id_sp=<?= $sach['id_sp'] ?>"><button class="them_gio_hang">THÊM VÀO GIỎ HÀNG</button></a>
+                    <p><?= $sach['describe_sp'] ?></p>
             </div>
         </div>
 
@@ -27,10 +22,20 @@
     <div class="danh_gia">
         <h2>ĐÁNH GIÁ SẢN PHẨM</h2>
         <hr>
-        <form action="">
-            <input type="text" placeholder="Nhập nhận xét của bạn về sản phẩm">
-            <button>Gửi nhận xét</button>
-        </form>
+        <?php if (isset($_SESSION['khachhang'])) : ?>
+            <form action="">
+                <input type="text" placeholder="Nhập nhận xét của bạn về sản phẩm">
+                <button>Gửi nhận xét</button>
+            </form>
+        <?php else : ?>
+            <div style="text-align: center; margin-top: 20px">
+                <a href="index.php?ctl=form_dangnhap"
+                    style="color: red; font-weight: bold; font-size: 18px">
+                    Đăng nhập để bình luận
+                </a>
+            </div>
+
+        <?php endif ?>
     </div>
 
 </main>

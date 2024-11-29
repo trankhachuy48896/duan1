@@ -4,10 +4,10 @@ class khachhangController
     public function login()
     {
         // Kiểm tra xem người dùng đăng nhập chưa
-        if (isset($_SESSION['khachhang'])) {
-            header("Location: index.php");
-            die;
-        }
+        // if (isset($_SESSION['khachhang'])) {
+        //     header("Location: index.php");
+        //     die;
+        // }
 
         $error = null;
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -21,10 +21,10 @@ class khachhangController
                 if ($password === $khachhang['password']) { // So sánh trực tiếp
                     $_SESSION['khachhang'] = $khachhang;
 
-                    if ($khachhang['role'] == '0') {
-                        header('location: index.php');
+                    if ($khachhang['role'] == 0) {
+                        return  header('Location: index.php');
                     } else {
-                        header("Location: admin/index.php");
+                        return  header('Location: admin/index.php');
                     }
                     die;
                 } else {
@@ -57,5 +57,27 @@ class khachhangController
         session_destroy();
         header("Location: index.php");
         exit();
+    }
+
+    public function update_user()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $khachhang = $_POST;
+
+            $khachhang['id_kh'] = $_SESSION['khachhang']['id_kh'];
+            (new khach_hang)->update($khachhang);
+
+            $updatedUser = array_merge($_SESSION['khachhang'], $khachhang);
+            $_SESSION['khachhang'] = $updatedUser;
+
+            header("Location: index.php");
+            exit();
+        } else {
+            $id_kh = $_SESSION['khachhang']['id_kh'];
+            $khachhang = (new khach_hang)->find_one($id_kh);
+
+            // Hiển thị form cập nhật tài khoản
+            view("chinhsua_canhan", ['khachhang' => $khachhang]);
+        }
     }
 }
