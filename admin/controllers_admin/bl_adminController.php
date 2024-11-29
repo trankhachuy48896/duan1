@@ -1,4 +1,5 @@
 <?php
+ 
 require_once __DIR__ . '/../models_admin/bl_admin.php'; // Đảm bảo đường dẫn đúng
 
 class bl_adminController {
@@ -36,4 +37,4 @@ class bl_adminController {
         return is_numeric($id_st) && is_numeric($id_kh) && $rating >= 1 && $rating <= 5 && !empty($comment);
     }
 }
-?>
+?> 

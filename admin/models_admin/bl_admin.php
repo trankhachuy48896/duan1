@@ -5,29 +5,28 @@ class BL_admin {
 
     // Constructor để kết nối cơ sở dữ liệu
     public function __construct() {
-    // Gọi hàm kết nối cơ sở dữ liệu
-     $this->conn = connection();
+        // Gọi hàm kết nối cơ sở dữ liệu
+        $this->conn = connection();
     }
 
-    // Phương thức lấy tất cả bình luận
+    //  lấy tất cả bình luận
     public function allBL() {
         try {
-            $sql = "SELECT * FROM reviews";
+            $sql = "SELECT * FROM danh_gia";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-    // Xử lý lỗi nếu không thể truy vấn dữ liệu
+            // Xử lý lỗi nếu không thể truy vấn dữ liệu
             return [];
         }
     }
 
-    // Phương thức thêm bình luận vào cơ sở dữ liệu
+    // thêm bình luận vào cơ sở dữ liệu
     public function addComment($id_sp, $id_kh, $rating, $comment) {
         try {
             $sql = "INSERT INTO danh_gia (id_sp, id_kh, rating, comment, created_at_review) 
                     VALUES (:id_sp, :id_kh, :rating, :comment, NOW())";
-                    var_dump($sql);die;
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':id_sp', $id_sp);
             $stmt->bindParam(':id_kh', $id_kh);
@@ -40,7 +39,7 @@ class BL_admin {
         }
     }
 
-    // Phương thức xóa bình luận
+    //  xóa bình luận
     public function deleteComment($review_id) {
         try {
             $sql = "DELETE FROM danh_gia WHERE review_id = :review_id";

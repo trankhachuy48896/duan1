@@ -27,13 +27,25 @@
     </article>
 
     <div class="danh_gia">
-        <h2>ĐÁNH GIÁ SẢN PHẨM</h2>
-        <hr>
-        <form action="">
-            <input type="text" placeholder="Nhập nhận xét của bạn về sản phẩm">
-            <button>Gửi nhận xét</button>
-        </form>
-    </div>
+    <h2>ĐÁNH GIÁ SẢN PHẨM</h2>
+    <hr>
+    <form action="index.php?ctl=comment" method="POST">
+    <!-- ID sản phẩm -->
+    <input type="hidden" name="id_sp" value="<?= isset($sach['id_sp']) ? $sach['id_sp'] : ''; ?>">
+    <!-- ID khách hàng -->
+    <input type="hidden" name="id_kh" value="<?= isset($user['id_kh']) ? $user['id_kh'] : ''; ?>">
+    
+    <!-- Đánh giá -->
+    <input type="number" name="rating" min="1" max="5" placeholder="Nhập đánh giá (1-5)" required>
+    
+    <!-- Nhận xét -->
+    <textarea name="comment" placeholder="Nhập nhận xét của bạn về sản phẩm" required></textarea>
+    
+    <!-- Nút gửi -->
+    <button type="submit" name="submit_comment">Gửi nhận xét</button>
+</form>
+</div>
+
 
 </main>
 
