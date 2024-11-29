@@ -96,6 +96,7 @@ class giohangController
     // Thanh toán
     public function thanhToan() {
         // Lấy thong tin của người dùng
+        // var_dump($_POST);
         $user = [
             'id_kh'=> $_POST['id_kh'],
             'name_kh' => $_POST['name_kh'],
@@ -110,19 +111,21 @@ class giohangController
             'id_kh' => $_POST['id_kh'],
             'status' => 1,
             'payment' => $_POST['payment'],
-            'total_amount' => $_POST['total_amount'],
+            'total_amount' => $sumPrice,
            
         ];
          (new khach_hang) -> updateThanhToan($user['id_kh'], $user);
-            $id_dh = (new donhang) -> create_dh($order);
+        $id_dh = (new donhang) -> create_dh($order);
 
             $carts = $_SESSION['cart'];
+            // var_dump($carts);
+            // die;
             foreach($carts as $id=> $cart) {
                 $chiTietDonHang = [
                     'id_dh' => $id_dh,
                     'id_sp' => $id,
-                    'unit_price' => $cart['unit_price'],
-                    'quantity_dh' => $cart['quantity_dh']
+                    'unit_price' => $cart['price_sp'],
+                    'quantity_dh' => $cart['quantity_sp']
                 ];
                 (new donhang) -> createOrderDetail($chiTietDonHang);
             } 

@@ -3,7 +3,7 @@ include "header.php";
 ?>
 
 <main>
-    <form action="index.php?ctl=check_out" method=" POST">
+    <form action="index.php?ctl=check_out" method="POST">
         <div class="donhang">
             <div class="information">
                 <div class="information-user">
@@ -12,7 +12,7 @@ include "header.php";
                     Họ tên: <input type="text" name="name_kh" placeholder="Nhập họ tên" value="<?= $user['name_kh']  ?>" required>
                     Số điện thoại: <input type="text" name="phone" placeholder="Nhập số điện thoại" value="<?= $user['phone']  ?>" required>
                     Email: <input type="email" name="email" placeholder="Nhập email" value="<?= $user['email']  ?>" required>
-                    Địa chỉ giao hàng: <input type="text" name="address " placeholder="Nhập địa chỉ giao hàng" value="<?= $user['address']  ?>" required>
+                    Địa chỉ giao hàng: <input type="text" name="address" placeholder="Nhập địa chỉ giao hàng" value="<?= $user['address']  ?>" required>
                     <input type="hidden" name="id_kh" value="<?= $user['id_kh'] ?>">
                 </div>
 
