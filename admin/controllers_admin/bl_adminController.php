@@ -50,7 +50,4 @@ class bl_adminController
         return is_numeric($id_st) && is_numeric($id_kh) && $rating >= 1 && $rating <= 5 && !empty($comment);
     }
 }
-<<<<<<< HEAD
-?> 
-=======
->>>>>>> 743ac8244737ed2923a764e8c5bb6d94a4a86e5d
+?>
