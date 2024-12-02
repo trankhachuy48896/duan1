@@ -3,7 +3,9 @@
 <main>
     <div class="banner">
         <div class="banner-left">
-            <img src="img/banner1.webp" alt="">
+            <img src="" alt="" id="slideshow">
+            <button id="prev"><img src="./img/arrow-previous-left-icon.png" alt=""></button>
+            <button id="next"><img src="./img/arrow-next-right-icon.png" alt=""></button>
         </div>
         <div class="banner-right">
             <div class="banner-right-top">
@@ -92,5 +94,5 @@
 
 
 </main>
-
+<script src="./javaScript/javaBannerHome.js"></script>
 <?php include_once "footer.php" ?>

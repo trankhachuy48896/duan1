@@ -59,5 +59,8 @@ match ($ctl) {
     "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
+
+    "list_thongke" => (new ThongKeController)->thongKe(),
+
     default => view('../404'),
 };
