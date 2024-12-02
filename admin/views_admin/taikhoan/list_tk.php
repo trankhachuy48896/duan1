@@ -8,12 +8,13 @@
                 <tr>
                     <th>ID</th>
                     <th>Họ tên</th>
-                    <th>Tên đăng nhập</th>
                     <th>Mật khẩu</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
                     <th>Địa chỉ</th>
                     <th>Vai trò</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày tạo</th>
 
                     <th>
                         <a href="index.php?ctl=form_add_tk">Thêm</a>
@@ -21,21 +22,41 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Phạm Gia Bảo</td>
-                    <td>bao</td>
-                    <td>123456</td>
-                    <td>baopgph48888@gmail.com</td>
-                    <td>0339032143</td>
-                    <td>Vĩnh Phúc</td>
-                    <td>Admin</td>
-                    <td>
-                        <a href="index.php?ctl=edit_tk">Sửa</a>
-                        <a href="#">Xóa</a>
-                    </td>
-                </tr>
-                <!-- Thêm các hàng khác ở đây -->
+                <?php foreach ($users as $user) : ?>
+                    <tr>
+                        <td><?= $user['id_kh'] ?></td>
+                        <td><?= $user['name_kh'] ?></td>
+                        <td><?= $user['password'] ?></td>
+                        <td><?= $user['email'] ?></td>
+                        <td><?= $user['phone'] ?></td>
+                        <td><?= $user['address'] ?></td>
+                        <td>
+                            <?php
+                            if ($user['role'] == 0) {
+                                echo 'Khách hàng';
+                            } else {
+                                echo 'Quản trị';
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            if ($user['active'] == 0) {
+                                echo 'Đang hoạt động';
+                            } else {
+                                echo 'Ngừng hoạt động';
+                            }
+                            ?>
+                        </td>
+                        <td><?= $user['created_at_kh'] ?></td>
+                        <td>
+                            <?php if ($user['role'] != 1) : ?>
+                                <a href="index.php?ctl=edit_tk&id_kh=<?= $user['id_kh'] ?>">Sửa</a>
+                                <a onclick="return confirm('Bạn có chắc chắn muốn xóa?')" href="index.php?ctl=delete_tk&id_kh=<?= $user['id_kh'] ?>">Xóa</a>
+                            <?php endif ?>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
             </tbody>
         </table>
     </section>

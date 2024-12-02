@@ -1,6 +1,6 @@
 <?php
 
-class adminController
+class thongke_adminController
 {
 
     // Chỉ cho phép người dùng đã đăng nhập và có quyền admin truy cập trang quản trị
@@ -12,17 +12,8 @@ class adminController
         }
     }
 
-    public function index_admin()
+    public function list_thongke()
     {
-        $categories = (new dm_adminModel)->all_DM();
-        view_admin("home_admin", ['categories' => $categories]);
-    }
-
-    public function logout()
-    {
-        session_start();
-        session_destroy();
-        header("Location: ../index.php");
-        exit();
+        view_admin("thongke/list_thongke");
     }
 }
