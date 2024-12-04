@@ -64,10 +64,12 @@ match ($ctl) {
     "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
+
     "update_dh" => (new dh_adminController) -> update_dh(),
+
     // Thống kê
     "list_thongke" => (new thongke_adminController) -> list_thongke(),
     // Logout
     "logout" => (new adminController) -> logout(),
-    default => view('../404'),
+
 };

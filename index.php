@@ -20,8 +20,7 @@ require_once "controllers/gioithieuController.php";
 require_once "controllers/storeController.php";
 require_once "controllers/sachController.php";
 require_once "controllers/giohangController.php";
-
-
+require_once "models/storeModel.php";
 
 
 
@@ -39,8 +38,7 @@ match ($ctl) {
     "add_bl" => (new binhluanController) -> add_bl(),
     "comment" => (new binhluanController) -> add_bl(),
 
-
-    "store" => (new store)->store(),
+    "store" => (new StoreController) -> store(),
     // Form đăng ký, đăng nhập
     "form_dangnhap", "login" => (new khachhangController)->login(),
     "form_dangky", "add_dki"  => (new khachhangController)->sign_up(),
