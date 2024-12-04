@@ -8,27 +8,31 @@
                 <tr>
                     <th>ID</th>
                     <th>Tên khách hàng</th>
-                    <th>Ngày đặt hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Phương thức thanh toán</th>
+                    <th>Trạng thái</th>
                     <th>Tổng tiền</th>
-                    <th>Địa chỉ vận chuyển</th>
-                    <th>Ngày tạo đơn hàng</th>
+                    <th>Ngày mua</th>
                     <th>
                         Chức năng
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Phạm Gia Bảo</td>
-                    <td>200.000đ</td>
-                    <td>20/11/1999</td>
-                    <td>Nam Từ Liêm, Hà Nội</td>
-                    <td>21/11/1999</td>
-                    <td>
-                        <a href="#">Xóa</a>
-                    </td>
-                </tr>
+                <?php foreach ($orders as $order) : ?>
+                    <tr>
+                        <td><?= $order['id_dh'] ?></td>
+                        <td><?= $order['name_kh'] ?></td>
+                        <td><?= $order['phone'] ?></td>
+                        <td><?= $order['payment'] ?></td>
+                        <td><?= getOrderStatus($order['status']) ?></td>
+                        <td><?= number_format($order['total_amount']) ?>đ</td>
+                        <td><?= $order['created_at_dh'] ?></td>
+                        <td>
+                            <a href="index.php?ctl=update_dh&id_dh=<?= $order['id_dh'] ?>">Cập nhập</a>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
                 <!-- Thêm các hàng khác ở đây -->
             </tbody>
         </table>

@@ -24,7 +24,7 @@ class donhang
     {
         $sql = "SELECT o.*, name_kh, email, address, phone, od.unit_price, od.quantity_dh, name_sp, img_sp FROM
          don_hang o JOIN khach_hang u ON o.id_kh = u.id_kh JOIN chi_tiet_don_hang od ON od.id_dh=o.id_dh
-        JOIN san_pham p ON od.id_sp=p.id WHERE o.id_dh=:id_dh";
+        JOIN san_pham p ON od.id_sp=p.id_sp WHERE o.id_dh=:id_dh";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(['id_dh' => $id_dh]);
     }

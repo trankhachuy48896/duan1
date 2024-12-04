@@ -36,7 +36,7 @@ match ($ctl) {
     "baiviet" => (new baiviet) ->baiviet(),
     "lienhe" => ( new lienhe) ->lienhe(),
     "gioithieu" => ( new gioithieu) ->gioithieu(),
-    "add_bl" => (new binhluanController) -> push_bl(),
+    "add_bl" => (new binhluanController) -> add_bl(),
     "comment" => (new binhluanController) -> add_bl(),
 
 

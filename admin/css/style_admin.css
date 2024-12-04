@@ -67,6 +67,7 @@
 .menu ul li a:hover {
     background-color: #495057;
 }
+
 /* Phần nội dung bên phải */
 .content {
     flex: 1;
@@ -182,14 +183,14 @@
 
 
 /* Form Thêm Danh Mục */
-.form-add{
+.form-add {
     width: 80%;
     flex: 1;
     padding: 20px;
     background-color: #f8f9fa;
 }
 
-.form-add h2{
+.form-add h2 {
     margin-bottom: 15px;
 }
 
@@ -269,3 +270,68 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+
+.form-add p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.form-add h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #212529;
+    padding-bottom: 5px;
+}
+
+.form-add table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.form-add table th,
+.form-add table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+
+.form-add table th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-add table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.form-add table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.form-add table tr:last-child td {
+    font-weight: bold;
+    text-align: right;
+    background-color: #e9ecef;
+}
+
+.form-add select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #495057;
+}
+
+.text-right {
+    text-align: right;
+    font-weight: bold;
+}
