@@ -12,8 +12,24 @@ class dh_adminController
         }
     }
 
+
     public function list_dh()
     {
-        view_admin("donhang/list_dh");
+        $orders = (new dh_adminModel)->all_dh();
+        view_admin("donhang/list_dh", ['orders' => $orders]);
+    }
+
+    public function update_dh()
+    {
+        $id_dh = $_GET['id_dh'];
+        // Thay đổi trạng thái
+        if ($_SERVER['REQUEST_METHOD'] === "POST") {
+            $status = $_POST['status'];
+            (new dh_adminModel)->updateStatus($id_dh, $status);
+        }
+        $order = (new dh_adminModel)->find_dh($id_dh);
+        $order_details = (new dh_adminModel)->listOrderDetail($id_dh);
+        $status = (new dh_adminModel)->status_details;
+        view_admin("donhang/edit_dh", ['order' => $order, 'order_details' => $order_details, 'status' => $status]);
     }
 }

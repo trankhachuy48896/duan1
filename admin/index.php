@@ -9,6 +9,7 @@ require_once "models_admin/sach_adminModel.php";
 require_once "models_admin/nxb_adminModel.php";
 require_once "models_admin/tg_adminModel.php";
 require_once "models_admin/kh_adminModel.php";
+require_once "models_admin/dh_adminModel.php";
 
 require_once "controllers_admin/adminController.php";
 require_once "controllers_admin/dm_adminController.php";
@@ -63,15 +64,12 @@ match ($ctl) {
     "delete_nxb" => (new nxb_adminController)->delete_nxb(),
     // Đơn hàng
     "list_dh" => (new dh_adminController)->list_dh(),
-<<<<<<< HEAD
 
-    "list_thongke" => (new ThongKeController)->thongKe(),
+    "update_dh" => (new dh_adminController) -> update_dh(),
 
-=======
     // Thống kê
     "list_thongke" => (new thongke_adminController) -> list_thongke(),
     // Logout
     "logout" => (new adminController) -> logout(),
->>>>>>> c9ef840852e8e6430ab6aa3b06b7d95b2f6d1ca4
-    default => view('../404'),
+
 };
