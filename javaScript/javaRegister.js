@@ -23,7 +23,7 @@ document.querySelector("#register_form").addEventListener("submit", function (e)
         return;
     }
 
-    const phoneRegex = /^\d{10,}$/;
+    const phoneRegex = /^0\d{9}$/;
     if (phoneNumer_register && !phoneRegex.test(phoneNumer_register)) {
         e.preventDefault();
         errorMessageElement.textContent = "Vui lòng điền số điện thoại hợp lệ";
