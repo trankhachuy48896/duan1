@@ -30,7 +30,7 @@ include "header.php";
     </div>
 
 </div>
-<script src="javaRegister.js"></script>
+<script src="javaScript/javaRegister.js"></script>
 <?php
 include "footer.php";
 ?>
