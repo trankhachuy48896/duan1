@@ -4,6 +4,12 @@ include "header.php";
 <div class="form">
     <div class="form_login">
         <h2>Đăng Ký</h2>
+        <?php if (isset($_SESSION['error'])): ?>
+            <p style="color: red; text-align:center"><?php echo $_SESSION['error']; ?></p>
+            <?php unset($_SESSION['error']); // Xóa lỗi sau khi hiển thị 
+            ?>
+        <?php endif; ?>
+
         <form action="index.php?ctl=add_dki" method="post" enctype="multipart/form-data" id="register_form">
             Họ tên:
             <input type="text" name="name_kh" id="name_register" placeholder="Nhập họ tên">

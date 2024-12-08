@@ -42,9 +42,19 @@ class khachhangController
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $khachhang = $_POST;
+            $email = $khachhang['email'];
+
+            // Kiểm tra xem email đã tồn tại chưa
+            if ((new khach_hang)->find_email_user($email)) {
+                $_SESSION['error'] = 'Email này đã được sử dụng. Vui lòng sử dụng email khác.';
+                header("Location: index.php?ctl=form_dangky"); // Quay lại form đăng ký
+                die;
+            }
+
+            // Nếu email chưa tồn tại, thêm người dùng mới
             (new khach_hang)->add_dki($khachhang);
             $_SESSION['message'] = 'Đăng ký thành công';
-            header("Location: index.php?ctl=form_dangnhap");
+            header("Location: index.php?ctl=form_dangnhap"); // Chuyển hướng đến form đăng nhập
             die;
         }
         view("sign_up");

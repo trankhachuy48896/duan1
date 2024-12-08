@@ -26,10 +26,13 @@ class dh_adminController
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $status = $_POST['status'];
             (new dh_adminModel)->updateStatus($id_dh, $status);
+            header("location: index.php?ctl=list_dh");
+            die;
         }
         $order = (new dh_adminModel)->find_dh($id_dh);
         $order_details = (new dh_adminModel)->listOrderDetail($id_dh);
         $status = (new dh_adminModel)->status_details;
         view_admin("donhang/edit_dh", ['order' => $order, 'order_details' => $order_details, 'status' => $status]);
+       
     }
 }

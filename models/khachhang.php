@@ -73,4 +73,6 @@ class khach_hang
         $data['id_kh'] = $id_kh;
         $stmt->execute($data);
     }
+
+   
 }
